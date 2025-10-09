@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" class="light" data-header-styles="light" data-menu-styles="light">
+
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+    <meta name="description"
+        content="A Tailwind CSS admin template is a pre-designed web page for an admin dashboard. Optimizing it for SEO includes using meta descriptions and ensuring it's responsive and fast-loading.">
+    <meta name="keywords"
+        content="php, php template, admin, dashboard php, tailwind dashboard template, php dashboard, dashboard, template dashboard, template admin, tailwind, admin dashboard, php admin, dashboard css, admin template, dashboard template, bootstrap admin template.">
+
+    <!-- Title -->
+    <title> Valex - PHP Tailwind Admin Template </title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://php.spruko.com/tailwind/valex/valex/assets/images/brand-logos/favicon.ico">
+
+    <!-- Main Theme Js -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Icons CSS -->
+    <link href="../assets/css/icons.css" rel="stylesheet">
+
+    <!-- Styles CSS -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <!-- Simplebar Css -->
+    <link rel="stylesheet" href="../assets/libs/simplebar/simplebar.min.css">
+
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="../assets/libs/%40simonwep/pickr/themes/nano.min.css">
+
+
+
+
+
+</head>
+
+<body class="">
+
+    <!-- Switcher -->
+
+    <div id="hs-overlay-switcher" class="hs-overlay hidden ti-offcanvas ti-offcanvas-right !border-0" tabindex="-1">
+        <div class="ti-offcanvas-header z-10 relative">
+            <h5 class="ti-offcanvas-title">
+                Switcher
+            </h5>
+            <button type="button"
+                class="ti-btn flex-shrink-0 p-0  transition-none text-defaulttextcolor dark:text-defaulttextcolor/70 hover:text-gray-700 focus:ring-gray-400 focus:ring-offset-white  dark:hover:text-white/80 dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
+                data-hs-overlay="#hs-overlay-switcher">
+                <span class="sr-only">Close modal</span>
+                <i class="ri-close-circle-line leading-none text-lg"></i>
+            </button>
+        </div>
+        <div class="ti-offcanvas-body !p-0 !border-b dark:border-white/10 z-10 relative !h-auto">
+            <div class="flex rtl:space-x-reverse" aria-label="Tabs" role="tablist" role="tablist">
+                <button type="button"
+                    class="hs-tab-active:bg-success/20 w-full !py-2 !px-4 hs-tab-active:border-b-transparent text-defaultsize border-0 hs-tab-active:text-success dark:hs-tab-active:bg-success/20 dark:hs-tab-active:border-b-white/10 dark:hs-tab-active:text-success -mb-px bg-white font-semibold text-center  text-defaulttextcolor dark:text-defaulttextcolor/70 rounded-none hover:text-gray-700 dark:bg-bodybg dark:border-white/10  active"
+                    id="switcher-item-1" data-hs-tab="#switcher-1" aria-controls="switcher-1" role="tab">
+                    Theme Style
+                </button>
+                <button type="button"
+                    class="hs-tab-active:bg-success/20 w-full !py-2 !px-4 hs-tab-active:border-b-transparent text-defaultsize border-0 hs-tab-active:text-success dark:hs-tab-active:bg-success/20 dark:hs-tab-active:border-b-white/10 dark:hs-tab-active:text-success -mb-px  bg-white font-semibold text-center  text-defaulttextcolor dark:text-defaulttextcolor/70 rounded-none hover:text-gray-700 dark:bg-bodybg dark:border-white/10  dark:hover:text-gray-300"
+                    id="switcher-item-2" data-hs-tab="#switcher-2" aria-controls="switcher-2" role="tab">
+                    Theme Colors
+                </button>
+            </div>
+        </div>
+        <div class="ti-offcanvas-body !h-full overflow-auto" id="switcher-body">
+            <div id="switcher-1" role="tabpanel" aria-labelledby="switcher-item-1" class="space-y-6">
+                <div>
+                    <p class="switcher-style-head">Theme Color Mode:</p>
+                    <div class="grid grid-cols-3 switcher-style">
+                        <div class="flex items-center">
+                            <input type="radio" name="theme-style" class="ti-form-radio" id="switcher-light-theme"
+                                checked>
+                            <label for="switcher-light-theme"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Light</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="theme-style" class="ti-form-radio" id="switcher-dark-theme">
+                            <label for="switcher-dark-theme"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Dark</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="!mt-0">
+                    <p class="switcher-style-head">Directions:</p>
+                    <div class="grid grid-cols-3  switcher-style">
+                        <div class="flex items-center">
+                            <input type="radio" name="direction" class="ti-form-radio" id="switcher-ltr" checked>
+                            <label for="switcher-ltr"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">LTR</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="direction" class="ti-form-radio" id="switcher-rtl">
+                            <label for="switcher-rtl"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">RTL</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="!mt-0">
+                    <p class="switcher-style-head">Navigation Styles:</p>
+                    <div class="grid grid-cols-3  switcher-style">
+                        <div class="flex items-center">
+                            <input type="radio" name="navigation-style" class="ti-form-radio" id="switcher-vertical"
+                                checked>
+                            <label for="switcher-vertical"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Vertical</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="navigation-style" class="ti-form-radio" id="switcher-horizontal">
+                            <label for="switcher-horizontal"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Horizontal</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="!mt-0 navigation-menu-styles">
+                    <p class="switcher-style-head">Navigation Menu Style:</p>
+                    <div class="grid grid-cols-2 gap-2 switcher-style">
+                        <div class="flex">
+                            <input type="radio" name="navigation-data-menu-styles" class="ti-form-radio"
+                                id="switcher-menu-click">
+                            <label for="switcher-menu-click"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Menu
+                                Click</label>
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="navigation-data-menu-styles" class="ti-form-radio"
+                                id="switcher-menu-hover">
+                            <label for="switcher-menu-hover"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Menu
+                                Hover</label>
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="navigation-data-menu-styles" class="ti-form-radio"
+                                id="switcher-icon-click">
+                            <label for="switcher-icon-click"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Icon
+                                Click</label>
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="navigation-data-menu-styles" class="ti-form-radio"
+                                id="switcher-icon-hover">
+                            <label for="switcher-icon-hover"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Icon
+                                Hover</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="!mt-0 sidemenu-layout-styles">
+                    <p class="switcher-style-head">Sidemenu Layout Syles:</p>
+                    <div class="grid grid-cols-2 gap-2 switcher-style">
+                        <div class="flex">
+                            <input type="radio" name="sidemenu-layout-styles" class="ti-form-radio"
+                                id="switcher-default-menu" checked>
+                            <label for="switcher-default-menu"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold ">Default
+                                Menu</label>
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="sidemenu-layout-styles" class="ti-form-radio"
+                                id="switcher-closed-menu">
+                            <label for="switcher-closed-menu"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold ">
+                                Closed
+                                Menu</label>
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="sidemenu-layout-styles" class="ti-form-radio"
+                                id="switcher-icontext-menu">
+                            <label for="switcher-icontext-menu"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold ">Icon
+                                Text</label>
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="sidemenu-layout-styles" class="ti-form-radio"
+                                id="switcher-icon-overlay">
+                            <label for="switcher-icon-overlay"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold ">Icon
+                                Overlay</label>
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="sidemenu-layout-styles" class="ti-form-radio"
+                                id="switcher-detached">
+                            <label for="switcher-detached"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold ">Detached</label>
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="sidemenu-layout-styles" class="ti-form-radio"
+                                id="switcher-double-menu">
+                            <label for="switcher-double-menu"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Double
+                                Menu</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="!mt-0">
+                    <p class="switcher-style-head">Page Styles:</p>
+                    <div class="grid grid-cols-3  switcher-style">
+                        <div class="flex">
+                            <input type="radio" name="data-page-styles" class="ti-form-radio" id="switcher-regular"
+                                checked>
+                            <label for="switcher-regular"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Regular</label>
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="data-page-styles" class="ti-form-radio" id="switcher-classic">
+                            <label for="switcher-classic"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Classic</label>
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="data-page-styles" class="ti-form-radio" id="switcher-modern">
+                            <label for="switcher-modern"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">
+                                Modern</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="!mt-0">
+                    <p class="switcher-style-head">Layout Width Styles:</p>
+                    <div class="grid grid-cols-3 switcher-style">
+                        <div class="flex">
+                            <input type="radio" name="layout-width" class="ti-form-radio" id="switcher-full-width"
+                                checked>
+                            <label for="switcher-full-width"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">FullWidth</label>
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="layout-width" class="ti-form-radio" id="switcher-boxed">
+                            <label for="switcher-boxed"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Boxed</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="!mt-0">
+                    <p class="switcher-style-head">Menu Positions:</p>
+                    <div class="grid grid-cols-3  switcher-style">
+                        <div class="flex">
+                            <input type="radio" name="data-menu-positions" class="ti-form-radio"
+                                id="switcher-menu-fixed" checked>
+                            <label for="switcher-menu-fixed"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Fixed</label>
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="data-menu-positions" class="ti-form-radio"
+                                id="switcher-menu-scroll">
+                            <label for="switcher-menu-scroll"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Scrollable
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="!mt-0">
+                    <p class="switcher-style-head">Header Positions:</p>
+                    <div class="grid grid-cols-3 switcher-style">
+                        <div class="flex">
+                            <input type="radio" name="data-header-positions" class="ti-form-radio"
+                                id="switcher-header-fixed" checked>
+                            <label for="switcher-header-fixed"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">
+                                Fixed</label>
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="data-header-positions" class="ti-form-radio"
+                                id="switcher-header-scroll">
+                            <label for="switcher-header-scroll"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Scrollable
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="!mt-0">
+                    <p class="switcher-style-head">Loader:</p>
+                    <div class="grid grid-cols-3 switcher-style">
+                        <div class="flex">
+                            <input type="radio" name="page-loader" class="ti-form-radio" id="switcher-loader-enable"
+                                checked>
+                            <label for="switcher-loader-enable"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">
+                                Enable</label>
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="page-loader" class="ti-form-radio" id="switcher-loader-disable">
+                            <label for="switcher-loader-disable"
+                                class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2  font-semibold">Disable
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="switcher-2" class="hidden" role="tabpanel" aria-labelledby="switcher-item-2">
+                <div class="theme-colors">
+                    <p class="switcher-style-head">Menu Colors:</p>
+                    <div class="flex switcher-style space-x-3 rtl:space-x-reverse">
+                        <div class="hs-tooltip ti-main-tooltip ti-form-radio switch-select ">
+                            <input class="hs-tooltip-toggle ti-form-radio color-input color-white" type="radio"
+                                name="menu-colors" id="switcher-menu-light" checked>
+                            <span
+                                class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                                role="tooltip">
+                                Light Menu
+                            </span>
+                        </div>
+                        <div class="hs-tooltip ti-main-tooltip ti-form-radio switch-select ">
+                            <input class="hs-tooltip-toggle ti-form-radio color-input color-dark" type="radio"
+                                name="menu-colors" id="switcher-menu-dark">
+                            <span
+                                class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                                role="tooltip">
+                                Dark Menu
+                            </span>
+                        </div>
+                        <div class="hs-tooltip ti-main-tooltip ti-form-radio switch-select ">
+                            <input class="hs-tooltip-toggle ti-form-radio color-input color-primary" type="radio"
+                                name="menu-colors" id="switcher-menu-primary">
+                            <span
+                                class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                                role="tooltip">
+                                Color Menu
+                            </span>
+                        </div>
+                        <div class="hs-tooltip ti-main-tooltip ti-form-radio switch-select ">
+                            <input class="hs-tooltip-toggle ti-form-radio color-input color-gradient" type="radio"
+                                name="menu-colors" id="switcher-menu-gradient">
+                            <span
+                                class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                                role="tooltip">
+                                Gradient Menu
+                            </span>
+                        </div>
+                        <div class="hs-tooltip ti-main-tooltip ti-form-radio switch-select ">
+                            <input class="hs-tooltip-toggle ti-form-radio color-input color-transparent" type="radio"
+                                name="menu-colors" id="switcher-menu-transparent">
+                            <span
+                                class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                                role="tooltip">
+                                Transparent Menu
+                            </span>
+                        </div>
+                    </div>
+                    <div class="px-4 text-textmuted text-[.6875rem] !mb-3"><b class="me-2">Note:</b>If you want to
+                        change color Menu
+                        dynamically
+                        change from below Theme Primary color picker.</div>
+                </div>
+                <div class="theme-colors">
+                    <p class="switcher-style-head">Header Colors:</p>
+                    <div class="flex switcher-style space-x-3 rtl:space-x-reverse">
+                        <div class="hs-tooltip ti-main-tooltip ti-form-radio switch-select ">
+                            <input class="hs-tooltip-toggle ti-form-radio color-input color-white !border" type="radio"
+                                name="header-colors" id="switcher-header-light" checked>
+                            <span
+                                class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                                role="tooltip">
+                                Light Header
+                            </span>
+                        </div>
+                        <div class="hs-tooltip ti-main-tooltip ti-form-radio switch-select ">
+                            <input class="hs-tooltip-toggle ti-form-radio color-input color-dark" type="radio"
+                                name="header-colors" id="switcher-header-dark">
+                            <span
+                                class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                                role="tooltip">
+                                Dark Header
+                            </span>
+                        </div>
+                        <div class="hs-tooltip ti-main-tooltip ti-form-radio switch-select ">
+                            <input class="hs-tooltip-toggle ti-form-radio color-input color-primary" type="radio"
+                                name="header-colors" id="switcher-header-primary">
+                            <span
+                                class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                                role="tooltip">
+                                Color Header
+                            </span>
+                        </div>
+                        <div class="hs-tooltip ti-main-tooltip ti-form-radio switch-select ">
+                            <input class="hs-tooltip-toggle ti-form-radio color-input color-gradient" type="radio"
+                                name="header-colors" id="switcher-header-gradient">
+                            <span
+                                class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                                role="tooltip">
+                                Gradient Header
+                            </span>
+                        </div>
+                        <div class="hs-tooltip ti-main-tooltip ti-form-radio switch-select ">
+                            <input class="hs-tooltip-toggle ti-form-radio color-input color-transparent" type="radio"
+                                name="header-colors" id="switcher-header-transparent">
+                            <span
+                                class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                                role="tooltip">
+                                Transparent Header
+                            </span>
+                        </div>
+                    </div>
+                    <div class="px-4 text-textmuted text-[.6875rem] !mb-3"><b class="me-2">Note:</b>If you want to
+                        change color
+                        Header dynamically
+                        change from below Theme Primary color picker.</div>
+                </div>
+                <div class="theme-colors">
+                    <p class="switcher-style-head">Theme Primary:</p>
+                    <div class="flex switcher-style space-x-3 rtl:space-x-reverse">
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio color-input color-primary-1" type="radio" name="theme-primary"
+                                id="switcher-primary" checked>
+                        </div>
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio color-input color-primary-2" type="radio" name="theme-primary"
+                                id="switcher-primary1">
+                        </div>
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio color-input color-primary-3" type="radio" name="theme-primary"
+                                id="switcher-primary2">
+                        </div>
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio color-input color-primary-4" type="radio" name="theme-primary"
+                                id="switcher-primary3">
+                        </div>
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio color-input color-primary-5" type="radio" name="theme-primary"
+                                id="switcher-primary4">
+                        </div>
+                        <div class="ti-form-radio switch-select ps-0 mt-1 color-primary-light">
+                            <div class="theme-container-primary"></div>
+                            <div class="pickr-container-primary"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="theme-colors">
+                    <p class="switcher-style-head">Theme Background:</p>
+                    <div class="flex switcher-style space-x-3 rtl:space-x-reverse">
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio color-input color-bg-1" type="radio" name="theme-background"
+                                id="switcher-background" checked>
+                        </div>
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio color-input color-bg-2" type="radio" name="theme-background"
+                                id="switcher-background1">
+                        </div>
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio color-input color-bg-3" type="radio" name="theme-background"
+                                id="switcher-background2">
+                        </div>
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio color-input color-bg-4" type="radio" name="theme-background"
+                                id="switcher-background3">
+                        </div>
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio color-input color-bg-5" type="radio" name="theme-background"
+                                id="switcher-background4">
+                        </div>
+                        <div class="ti-form-radio switch-select ps-0 mt-1 color-bg-transparent">
+                            <div class="theme-container-background hidden"></div>
+                            <div class="pickr-container-background"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-image theme-colors">
+                    <p class="switcher-style-head">Menu With Background Image:</p>
+                    <div class="flex switcher-style space-x-3 rtl:space-x-reverse flex-wrap gap-3">
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio bgimage-input bg-img1" type="radio" name="theme-images"
+                                id="switcher-bg-img">
+                        </div>
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio bgimage-input bg-img2" type="radio" name="theme-images"
+                                id="switcher-bg-img1">
+                        </div>
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio bgimage-input bg-img3" type="radio" name="theme-images"
+                                id="switcher-bg-img2">
+                        </div>
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio bgimage-input bg-img4" type="radio" name="theme-images"
+                                id="switcher-bg-img3">
+                        </div>
+                        <div class="ti-form-radio switch-select">
+                            <input class="ti-form-radio bgimage-input bg-img5" type="radio" name="theme-images"
+                                id="switcher-bg-img4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ti-offcanvas-footer gap-4 sm:flex justify-between">
+            <a href="https://1.envato.market/7axkzO" target="_blank" class="w-full ti-btn ti-btn-primary-full m-1">Buy
+                Now</a>
+            <a href="https://1.envato.market/MGEaN" target="_blank" class="w-full ti-btn ti-btn-info-full m-1">Our
+                Portfolio</a>
+            <a href="javascript:void(0);" id="reset-all" class="w-full ti-btn ti-btn-danger-full m-1">Reset</a>
+        </div>
+    </div>
+    <!-- End switcher -->
+
+    <!-- Loader -->
+    <div id="loader">
+        <img src="https://php.spruko.com/tailwind/valex/valex/assets/images/media/loader.svg" alt="">
+    </div>
+    <!-- Loader -->
+
+    <div class="page">
+
+        <!-- Main-Header -->
+
+        <header class="app-header">
+            <nav class="main-header" aria-label="Global">
+                <div class="main-header-container !px-[0.85rem]">
+
+                    <div class="header-content-left">
+                        <!-- Start::header-element -->
+                        <div class="header-element">
+                            <div class="horizontal-logo">
+                                <a href="index.html" class="header-logo">
+                                    <img src="../assets/images/brand-logos/desktop-logo.png" alt="logo"
+                                        class="desktop-logo">
+                                    <img src="../assets/images/brand-logos/toggle-logo.png" alt="logo"
+                                        class="toggle-logo">
+                                    <img src="../assets/images/brand-logos/desktop-dark.png" alt="logo"
+                                        class="desktop-dark">
+                                    <img src="../assets/images/brand-logos/toggle-dark.png" alt="logo"
+                                        class="toggle-dark">
+                                    <img src="../assets/images/brand-logos/desktop-white.png" alt="logo"
+                                        class="desktop-white">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End::header-element -->
+
+                        <!-- End::header-element -->
+                        <div class="header-element !items-center">
+                            <!-- Start::header-link -->
+                            <a aria-label="Hide Sidebar"
+                                class="sidemenu-toggle animated-arrow header-link  hor-toggle horizontal-navtoggle inline-flex items-center"
+                                href="javascript:void(0);"><i class="header-icon fe fe-align-left"></i></a>
+                            <div class="main-header-center hidden lg:block">
+                                <input
+                                    class="form-control placeholder:!text-headerprimecolor placeholder:opacity-70 placeholder:font-thin placeholder:text-sm"
+                                    placeholder="Search for anything..." type="search">
+                                <button class="btn"><i class="fa fa-search hidden md:block opacity-[0.5]"></i></button>
+                            </div>
+                            <!-- End::header-link -->
+                        </div>
+                    </div>
+                    <div class="header-content-right">
+
+                        <div
+                            class="header-element hs-dropdown search-dropdown ti-dropdown  lg:!hidden [--auto-close:inside]">
+                            <a href="javascript:void(0);" class="header-link dropdown-toggle"
+                                id="hs-dropdown-auto-close-inside" data-bs-toggle="dropdown" aria-expanded="false"> <svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                                    class="header-link-icon">
+                                    <path
+                                        d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z">
+                                    </path>
+                                </svg> </a>
+
+                            <div class="hs-dropdown-menu ti-dropdown-menu hidden"
+                                aria-labelledby="hs-dropdown-auto-close-inside">
+                                <div>
+                                    <div class="input-group w-full p-2"> <input type="text" class="form-control"
+                                            placeholder="Search....">
+                                        <div class="ti-btn ti-btn-primary-full !mb-0"> <i class="fa fa-search"
+                                                aria-hidden="true"></i> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+
+                        <!-- light and dark theme -->
+                        <div
+                            class="header-element header-theme-mode hidden !items-center sm:block !py-[1rem] !px-[0.65rem]">
+                            <a aria-label="anchor"
+                                class="hs-dark-mode-active:hidden flex hs-dark-mode group flex-shrink-0 justify-center items-center gap-2  rounded-full font-medium transition-all text-xs dark:bg-bodybg dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
+                                href="javascript:void(0);" data-hs-theme-click-value="dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="header-link-icon" height="24"
+                                    viewBox="0 -960 960 960" width="24">
+                                    <path
+                                        d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z" />
+                                </svg>
+                            </a>
+                            <a aria-label="anchor"
+                                class="hs-dark-mode-active:flex hidden hs-dark-mode group flex-shrink-0 justify-center items-center gap-2  rounded-full font-medium text-defaulttextcolor  transition-all text-xs dark:bg-bodybg  dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
+                                href="javascript:void(0);" data-hs-theme-click-value="light">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="header-link-icon" fill="currentColor"
+                                    height="24" viewBox="0 -960 960 960" width="24">
+                                    <path
+                                        d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- End light and dark theme -->
+
+                        
+
+                       
+
+                        
+
+
+                        
+
+                        
+
+                        <!-- End::header-element -->
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- End Main-Header -->
+
+        <!-- Country-selector modal -->
+
+        
+
+       
+        <!-- End Country-selector modal -->
+
+        <!--Main-Sidebar-->
+
+        <aside class="app-sidebar" id="sidebar">
+
+            <!-- Start::main-sidebar-header -->
+            <div class="main-sidebar-header">
+                <a href="index.html" class="header-logo">
+                    <img src="../assets/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo">
+                    <img src="../assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo">
+                    <img src="../assets/images/brand-logos/desktop-dark.png" alt="logo" class="desktop-dark">
+                    <img src="../assets/images/brand-logos/toggle-dark.png" alt="logo" class="toggle-dark">
+                    <img src="../assets/images/brand-logos/desktop-white.png" alt="logo" class="desktop-white">
+                </a>
+            </div>
+            <!-- End::main-sidebar-header -->
+
+            <!-- Start::main-sidebar -->
+        <div class="main-sidebar" id="sidebar-scroll">
+          <!-- Start::nav -->
+          <nav class="main-menu-container nav nav-pills flex-column sub-open">
+            <div class="slide-left" id="slide-left">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#7b8191"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
+                ></path>
+              </svg>
+            </div>
+            <ul class="main-menu">
+              <li class="slide has-sub">
+                <a href="index.html" class="side-menu__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="side-menu__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path
+                      d="M5 5h4v6H5zm10 8h4v6h-4zM5 17h4v2H5zM15 5h4v2h-4z"
+                      opacity=".3"
+                    />
+                    <path
+                      d="M3 13h8V3H3v10zm2-8h4v6H5V5zm8 16h8V11h-8v10zm2-8h4v6h-4v-6zM13 3v6h8V3h-8zm6 4h-4V5h4v2zM3 21h8v-6H3v6zm2-4h4v2H5v-2z"
+                    />
+                  </svg>
+                  <span class="side-menu__label">DASHBOARD</span>
+                  <!-- <i class="fe fe-chevron-right side-menu__angle"></i> -->
+                </a>
+                <ul class="slide-menu child1">
+                  <!-- <li class="slide side-menu__label1">
+										<a href="javascript:void(0);">DASHBOARD</a>
+									</li> -->
+                  <!-- <li class="slide">
+										<a href="index.html" class="side-menu__item">Sales</a>
+									</li> -->
+
+                  <!-- <li class="slide">
+										<a href="index2.html" class="side-menu__item">DASHBOARD</a>
+									</li> -->
+                </ul>
+              </li>
+
+              <!-- Start::slide__category -->
+              <li class="slide__category">
+                <span class="category-name">MARKET PLACE</span>
+              </li>
+              <!-- End::slide__category -->
+
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="cards.html" class="side-menu__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="side-menu__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M21.9 8.89l-1.05-4.37c-.22-.9-1-1.52-1.91-1.52H5.05c-.9 0-1.69.63-1.9 1.52L2.1 8.89c-.24 1.02-.02 2.06.62 2.88.08.11.19.19.28.29V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6.94c.09-.09.2-.18.28-.28.64-.82.87-1.87.62-2.89zm-2.99-3.9l1.05 4.37c.1.42.01.84-.25 1.17-.14.18-.44.47-.94.47-.61 0-1.14-.49-1.21-1.14L16.98 5l1.93-.01zM13 5h1.96l.54 4.52c.05.39-.07.78-.33 1.07-.22.26-.54.41-.95.41-.67 0-1.22-.59-1.22-1.31V5zM8.49 9.52L9.04 5H11v4.69c0 .72-.55 1.31-1.29 1.31-.34 0-.65-.15-.89-.41-.25-.29-.37-.68-.33-1.07zm-4.45-.16L5.05 5h1.97l-.58 4.86c-.08.65-.6 1.14-1.21 1.14-.49 0-.8-.29-.93-.47-.27-.32-.36-.75-.26-1.17zM5 19v-6.03c.08.01.15.03.23.03.87 0 1.66-.36 2.24-.95.6.6 1.4.95 2.31.95.87 0 1.65-.36 2.23-.93.59.57 1.39.93 2.29.93.84 0 1.64-.35 2.24-.95.58.59 1.37.95 2.24.95.08 0 .15-.02.23-.03V19H5z"
+                    />
+                  </svg>
+                  <span class="side-menu__label">MARKET PLACE</span>
+                </a>
+              </li>
+
+              <!-- Start::slide__category -->
+              <li class="slide__category">
+                <span class="category-name">ORDERS</span>
+              </li>
+              <!-- End::slide__category -->
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="invoice-list.html" class="side-menu__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="side-menu__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M13 12h7v1.5h-7zm0-2.5h7V11h-7zm0 5h7V16h-7zM21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 15h-9V6h9v13z"
+                    />
+                  </svg>
+                  <span class="side-menu__label">ORDERS</span>
+                </a>
+              </li>
+
+              <!-- End::slide -->
+
+              <!-- Start::slide__category -->
+              <li class="slide__category">
+                <span class="category-name">INVOICE</span>
+              </li>
+              <!-- End::slide__category -->
+
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="create-invoice.html" class="side-menu__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="side-menu__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 14h-3v3h-2v-3H8v-2h3v-3h2v3h3v2zm-3-7V3.5L18.5 9H13z"
+                    />
+                  </svg>
+                  <span class="side-menu__label">CREATE INVOICE</span>
+                </a>
+              </li>
+
+              <!-- Start::slide__category -->
+              <li class="slide__category">
+                <span class="category-name">AFFILIATE PROGRAM</span>
+              </li>
+              <!-- End::slide__category -->
+
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="placeholders.html" class="side-menu__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="side-menu__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                    />
+                  </svg>
+                  <span class="side-menu__label">AFFILIATE PROGRAM</span>
+                </a>
+              </li>
+              <!-- End::slide -->
+
+              <!-- Start::slide__category -->
+              <li class="slide__category">
+                <span class="category-name">SETTINGS</span>
+              </li>
+              <!-- End::slide__category -->
+
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="reset-password-cover.html" class="side-menu__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="side-menu__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
+                    />
+                  </svg>
+                  <span class="side-menu__label">SETTINGS</span>
+                </a>
+              </li>
+              <!-- End::slide -->
+
+              <!-- Start::slide__category -->
+              <li class="slide__category">
+                <span class="category-name">LOG OUT</span>
+              </li>
+              <!-- End::slide__category -->
+
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="sign-in-cover.html" class="side-menu__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="side-menu__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"
+                    />
+                  </svg>
+                  <span class="side-menu__label">LOG OUT</span>
+                </a>
+              </li>
+              <!-- End::slide -->
+            </ul>
+            <div class="slide-right" id="slide-right">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#7b8191"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+                ></path>
+              </svg>
+            </div>
+          </nav>
+          <!-- End::nav -->
+        </div>
+        <!-- End::main-sidebar -->
+
+        </aside>
+        <!-- End Main-Sidebar-->
+
+        <!-- Start::content  -->
+        <div class="content">
+            <!-- Start::main-content -->
+            <div class="main-content">
+
+
+                <!-- Page Header -->
+                <div class="md:flex block items-center justify-between mb-6 mt-[2rem]  page-header-breadcrumb">
+                    <!-- <div class="my-auto">
+                        <h5 class="page-title text-[1.3125rem] font-medium text-defaulttextcolor mb-0">Pricing</h5>
+                        <nav>
+                            <ol class="flex items-center whitespace-nowrap min-w-0">
+                                <li class="text-[12px]"> <a class="flex items-center text-primary hover:text-primary"
+                                        href="javascript:void(0);"> Pages <i
+                                            class="ti ti-chevrons-right flex-shrink-0 mx-3 overflow-visible text-textmuted rtl:rotate-180"></i>
+                                    </a> </li>
+                                <li class="text-[12px]"> <a class="flex items-center text-textmuted"
+                                        href="javascript:void(0);">Pricing
+                                    </a> </li>
+                            </ol>
+                        </nav>
+                    </div> -->
+
+                    
+                </div>
+                <!-- Page Header Close -->
+
+                <!-- Start:: row-1 -->
+
+                <!-- End:: row-1 -->
+
+                <!-- Start:: row-2 -->
+                <div class="grid grid-cols-12 gap-6 justify-center mb-[3rem]">
+                    <div class="xxl:col-span-2 col-span-12"></div>
+                    <div class="xxl:col-span-8 xl:col-span-12 col-span-12">
+                        <div class="container">
+                            <div class="flex justify-center !mx-auto">
+                                <div class="">
+                                    <h5 class="font-semibold text-center text-[1.25rem] !text-defaulttextcolor"> Simple
+                                        Transparent Pricing
+</h5>
+                                    <p class="text-textmuted mb-4 text-center">Two Packages, One Goal: Premium business formation services.</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-center mb-4">
+                                <nav class="bg-primary/10 p-4 rounded-md mb-4" aria-label="Tabs" role="tablist">
+                                    <a class="hs-tab-active:bg-primary hs-tab-active:text-white cursor-pointer text-primary py-2 px-4  text-sm font-medium text-center rounded-sm hover:text-primary active"
+                                        id="pricing-item1" data-hs-tab="#pricing-monthly-pane"
+                                        aria-controls="pricing-monthly-pane">
+                                        BASIC
+                                    </a>
+                                    <a class="hs-tab-active:bg-primary hs-tab-active:text-white cursor-pointer text-primary py-2 px-4 text-sm font-medium text-center  rounded-sm hover:text-primary "
+                                        id="pricing-yearly1-item1" data-hs-tab="#pricing-yearly-pane"
+                                        aria-controls="pricing-yearly-pane">
+                                        PREMIUM
+                                    </a>
+                                </nav>
+                            </div>
+                            <div class="box overflow-hidden">
+                                <div class="box-body !p-0">
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane show active !border-0 !p-0 border-b-0 dark:border-defaultborder/10"
+                                            id="pricing-monthly-pane" role="tabpanel" aria-labelledby="pricing-monthly"
+                                            tabindex="0">
+                                            <div class="grid grid-cols-12">
+                                                <div
+                                                    class="xxl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-4 sm:col-span-12 col-span-12 md:border-e md:border-b-0 border-b border-dashed dark:border-defaultborder/10 pe-0">
+                                                    <div class="p-6">
+                                                        <h6 class="font-semibold text-center text-[1rem]">UNITED STATES
+                                                        </h6>
+                                                        <div class="py-4 flex items-center justify-center">
+                                                            <div class="pricing-svg1">
+                                                                <span
+                                                                    class="avatar avatar-md bg-primary/10 mb-2 icon-1">
+                                                                    <?xml version="1.0" encoding="utf-8"?><svg
+                                                                        version="1.1" id="Layer_1"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                        x="0px" y="0px" viewBox="0 0 55.2 38.4"
+                                                                        style="enable-background:new 0 0 55.2 38.4"
+                                                                        xml:space="preserve">
+                                                                        <style type="text/css">
+                                                                            .st0 {
+                                                                                fill: #B22234;
+                                                                            }
+
+                                                                            .st1 {
+                                                                                fill: #FFFFFF;
+                                                                            }
+
+                                                                            .st2 {
+                                                                                fill: #3C3B6E;
+                                                                            }
+                                                                        </style>
+                                                                        <g>
+                                                                            <path class="st0"
+                                                                                d="M3.03,0h49.13c1.67,0,3.03,1.36,3.03,3.03v32.33c0,1.67-1.36,3.03-3.03,3.03H3.03C1.36,38.4,0,37.04,0,35.37 V3.03C0,1.36,1.36,0,3.03,0L3.03,0z" />
+                                                                            <path class="st1"
+                                                                                d="M0.02,2.73h55.17c0.01,0.1,0.02,0.2,0.02,0.31v2.94H0V3.03C0,2.93,0.01,2.83,0.02,2.73L0.02,2.73z M55.2,8.67 v3.24H0V8.67H55.2L55.2,8.67z M55.2,14.61v3.24H0v-3.24H55.2L55.2,14.61z M55.2,20.55v3.24H0v-3.24H55.2L55.2,20.55z M55.2,26.49 v3.24H0v-3.24H55.2L55.2,26.49z M55.2,32.43v2.93c0,0.1-0.01,0.21-0.02,0.31H0.02C0.01,35.58,0,35.47,0,35.37v-2.93H55.2 L55.2,32.43z" />
+                                                                            <path class="st2"
+                                                                                d="M20.8,0v20.68H0V3.03C0,1.36,1.36,0,3.03,0H20.8L20.8,0L20.8,0z" />
+                                                                            <polygon class="st1"
+                                                                                points="1.23,2.86 1.92,5.01 0.1,3.68 2.36,3.68 0.53,5.01 1.23,2.86" />
+                                                                            <polygon class="st1"
+                                                                                points="1.23,7.02 1.92,9.17 0.1,7.84 2.36,7.84 0.53,9.17 1.23,7.02" />
+                                                                            <polygon class="st1"
+                                                                                points="1.23,11.18 1.92,13.33 0.1,12 2.36,12 0.53,13.33 1.23,11.18" />
+                                                                            <polygon class="st1"
+                                                                                points="1.23,15.34 1.92,17.49 0.1,16.16 2.36,16.16 0.53,17.49 1.23,15.34" />
+                                                                            <polygon class="st1"
+                                                                                points="3.67,0.78 4.37,2.93 2.54,1.6 4.81,1.6 2.97,2.93 3.67,0.78" />
+                                                                            <polygon class="st1"
+                                                                                points="3.67,4.94 4.37,7.09 2.54,5.76 4.81,5.76 2.97,7.09 3.67,4.94" />
+                                                                            <polygon class="st1"
+                                                                                points="3.67,9.1 4.37,11.25 2.54,9.92 4.81,9.92 2.97,11.25 3.67,9.1" />
+                                                                            <polygon class="st1"
+                                                                                points="3.67,13.26 4.37,15.41 2.54,14.08 4.81,14.08 2.97,15.41 3.67,13.26" />
+                                                                            <polygon class="st1"
+                                                                                points="3.67,17.42 4.37,19.57 2.54,18.24 4.81,18.24 2.97,19.57 3.67,17.42" />
+                                                                            <polygon class="st1"
+                                                                                points="6.12,2.86 6.82,5.01 4.99,3.68 7.25,3.68 5.42,5.01 6.12,2.86" />
+                                                                            <polygon class="st1"
+                                                                                points="6.12,7.02 6.82,9.17 4.99,7.84 7.25,7.84 5.42,9.17 6.12,7.02" />
+                                                                            <polygon class="st1"
+                                                                                points="6.12,11.18 6.82,13.33 4.99,12 7.25,12 5.42,13.33 6.12,11.18" />
+                                                                            <polygon class="st1"
+                                                                                points="6.12,15.34 6.82,17.49 4.99,16.16 7.25,16.16 5.42,17.49 6.12,15.34" />
+                                                                            <polygon class="st1"
+                                                                                points="8.57,0.78 9.26,2.93 7.44,1.6 9.7,1.6 7.87,2.93 8.57,0.78" />
+                                                                            <polygon class="st1"
+                                                                                points="8.57,4.94 9.26,7.09 7.44,5.76 9.7,5.76 7.87,7.09 8.57,4.94" />
+                                                                            <polygon class="st1"
+                                                                                points="8.57,9.1 9.26,11.25 7.44,9.92 9.7,9.92 7.87,11.25 8.57,9.1" />
+                                                                            <polygon class="st1"
+                                                                                points="8.57,13.26 9.26,15.41 7.44,14.08 9.7,14.08 7.87,15.41 8.57,13.26" />
+                                                                            <polygon class="st1"
+                                                                                points="8.57,17.42 9.26,19.57 7.44,18.24 9.7,18.24 7.87,19.57 8.57,17.42" />
+                                                                            <polygon class="st1"
+                                                                                points="11.01,2.86 11.71,5.01 9.88,3.68 12.14,3.68 10.31,5.01 11.01,2.86" />
+                                                                            <polygon class="st1"
+                                                                                points="11.01,7.02 11.71,9.17 9.88,7.84 12.14,7.84 10.31,9.17 11.01,7.02" />
+                                                                            <polygon class="st1"
+                                                                                points="11.01,11.18 11.71,13.33 9.88,12 12.14,12 10.31,13.33 11.01,11.18" />
+                                                                            <polygon class="st1"
+                                                                                points="11.01,15.34 11.71,17.49 9.88,16.16 12.14,16.16 10.31,17.49 11.01,15.34" />
+                                                                            <polygon class="st1"
+                                                                                points="13.46,0.78 14.16,2.93 12.33,1.6 14.59,1.6 12.76,2.93 13.46,0.78" />
+                                                                            <polygon class="st1"
+                                                                                points="13.46,4.94 14.16,7.09 12.33,5.76 14.59,5.76 12.76,7.09 13.46,4.94" />
+                                                                            <polygon class="st1"
+                                                                                points="13.46,9.1 14.16,11.25 12.33,9.92 14.59,9.92 12.76,11.25 13.46,9.1" />
+                                                                            <polygon class="st1"
+                                                                                points="13.46,13.26 14.16,15.41 12.33,14.08 14.59,14.08 12.76,15.41 13.46,13.26" />
+                                                                            <polygon class="st1"
+                                                                                points="13.46,17.42 14.16,19.57 12.33,18.24 14.59,18.24 12.76,19.57 13.46,17.42" />
+                                                                            <polygon class="st1"
+                                                                                points="15.9,2.86 16.6,5.01 14.77,3.68 17.03,3.68 15.21,5.01 15.9,2.86" />
+                                                                            <polygon class="st1"
+                                                                                points="15.9,7.02 16.6,9.17 14.77,7.84 17.03,7.84 15.21,9.17 15.9,7.02" />
+                                                                            <polygon class="st1"
+                                                                                points="15.9,11.18 16.6,13.33 14.77,12 17.03,12 15.21,13.33 15.9,11.18" />
+                                                                            <polygon class="st1"
+                                                                                points="15.9,15.34 16.6,17.49 14.77,16.16 17.03,16.16 15.21,17.49 15.9,15.34" />
+                                                                            <polygon class="st1"
+                                                                                points="18.35,0.78 19.05,2.93 17.22,1.6 19.48,1.6 17.65,2.93 18.35,0.78" />
+                                                                            <polygon class="st1"
+                                                                                points="18.35,4.94 19.05,7.09 17.22,5.76 19.48,5.76 17.65,7.09 18.35,4.94" />
+                                                                            <polygon class="st1"
+                                                                                points="18.35,9.1 19.05,11.25 17.22,9.92 19.48,9.92 17.65,11.25 18.35,9.1" />
+                                                                            <polygon class="st1"
+                                                                                points="18.35,13.26 19.05,15.41 17.22,14.08 19.48,14.08 17.65,15.41 18.35,13.26" />
+                                                                            <polygon class="st1"
+                                                                                points="18.35,17.42 19.05,19.57 17.22,18.24 19.48,18.24 17.65,19.57 18.35,17.42" />
+                                                                        </g>
+                                                                    </svg>
+                                                                </span>
+                                                                <!-- <i class="bi bi-tags"></i> -->
+                                                            </div>
+                                                            <div class="text-end ms-5">
+                                                                <p class="text-[1.5625rem] font-semibold mb-0">$229</p>
+                                                                <p
+                                                                    class="text-textmuted opacity-50 text-[.6875rem] font-semibold mb-0">
+                                                                    and then $99/yr</p>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="list-none text-center text-[0.75rem] px-4 pt-4 mb-0">
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">LLC Company Formation
+                                                                    <span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">LLC</span>
+                                                                </span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">US Address with Mail
+                                                                    forwarding
+                                                                    <!-- <span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">Unlimited</span> -->
+                                                                </span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Registered agent
+                                                                    service</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">US Business Stripe account
+                                                                    consultation
+                                                                    <!-- <span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">24/7</span> -->
+                                                                </span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">EIN letter</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Incorporation
+                                                                    documents</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Introduction to a
+                                                                    professional accountant</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Email support only</span>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="grid">
+                                                            <button type="button" class="ti-btn ti-btn-primary">Get
+                                                                Started</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="xxl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-4 sm:col-span-12 col-span-12 md:border-e md:border-b-0 border-b border-dashed dark:border-defaultborder/10 px-0">
+                                                    <div class="p-6">
+                                                        <h6 class="font-semibold text-center text-[1rem]">UNITED KINGDOM
+                                                        </h6>
+                                                        <div class="py-4 flex items-center justify-center">
+                                                            <div class="pricing-svg1">
+                                                                <span class="avatar avatar-md bg-danger/10 mb-2 icon-4">
+                                                                    <?xml version="1.0" encoding="utf-8"?><svg
+                                                                        version="1.1" id="Layer_1"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                        x="0px" y="0px" viewBox="0 0 55.2 38.4"
+                                                                        style="enable-background:new 0 0 55.2 38.4"
+                                                                        xml:space="preserve">
+                                                                        <style type="text/css">
+                                                                            .st0 {
+                                                                                fill: #FEFEFE;
+                                                                            }
+
+                                                                            .st1 {
+                                                                                fill: #C8102E;
+                                                                            }
+
+                                                                            .st2 {
+                                                                                fill: #012169;
+                                                                            }
+                                                                        </style>
+                                                                        <g>
+                                                                            <path class="st0"
+                                                                                d="M2.87,38.4h49.46c1.59-0.09,2.87-1.42,2.87-3.03V3.03c0-1.66-1.35-3.02-3.01-3.03H3.01 C1.35,0.01,0,1.37,0,3.03v32.33C0,36.98,1.28,38.31,2.87,38.4L2.87,38.4z" />
+                                                                            <polygon class="st1"
+                                                                                points="23.74,23.03 23.74,38.4 31.42,38.4 31.42,23.03 55.2,23.03 55.2,15.35 31.42,15.35 31.42,0 23.74,0 23.74,15.35 0,15.35 0,23.03 23.74,23.03" />
+                                                                            <path class="st2"
+                                                                                d="M33.98,12.43V0h18.23c1.26,0.02,2.34,0.81,2.78,1.92L33.98,12.43L33.98,12.43z" />
+                                                                            <path class="st2"
+                                                                                d="M33.98,25.97V38.4h18.35c1.21-0.07,2.23-0.85,2.66-1.92L33.98,25.97L33.98,25.97z" />
+                                                                            <path class="st2"
+                                                                                d="M21.18,25.97V38.4H2.87c-1.21-0.07-2.24-0.85-2.66-1.94L21.18,25.97L21.18,25.97z" />
+                                                                            <path class="st2"
+                                                                                d="M21.18,12.43V0H2.99C1.73,0.02,0.64,0.82,0.21,1.94L21.18,12.43L21.18,12.43z" />
+                                                                            <polygon class="st2"
+                                                                                points="0,12.8 7.65,12.8 0,8.97 0,12.8" />
+                                                                            <polygon class="st2"
+                                                                                points="55.2,12.8 47.51,12.8 55.2,8.95 55.2,12.8" />
+                                                                            <polygon class="st2"
+                                                                                points="55.2,25.6 47.51,25.6 55.2,29.45 55.2,25.6" />
+                                                                            <polygon class="st2"
+                                                                                points="0,25.6 7.65,25.6 0,29.43 0,25.6" />
+                                                                            <polygon class="st1"
+                                                                                points="55.2,3.25 36.15,12.8 40.41,12.8 55.2,5.4 55.2,3.25" />
+                                                                            <polygon class="st1"
+                                                                                points="19.01,25.6 14.75,25.6 0,32.98 0,35.13 19.05,25.6 19.01,25.6" />
+                                                                            <polygon class="st1"
+                                                                                points="10.52,12.81 14.78,12.81 0,5.41 0,7.55 10.52,12.81" />
+                                                                            <polygon class="st1"
+                                                                                points="44.63,25.59 40.37,25.59 55.2,33.02 55.2,30.88 44.63,25.59" />
+                                                                        </g>
+                                                                    </svg>
+                                                                </span>
+                                                                <!-- <i class="bi bi-hand-thumbs-up"></i> -->
+                                                            </div>
+                                                            <div class="text-end ms-5">
+                                                                <p class="text-[1.5625rem] font-semibold mb-0">$197</p>
+                                                                <p
+                                                                    class="text-textmuted opacity-50 text-[.6875rem] font-semibold mb-0">
+                                                                    and then $59/yr</p>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="list-none text-center text-[0.75rem] px-4 pt-4 mb-0">
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Your private company in the
+                                                                    UK
+                                                                    <!-- <span class="badge bg-light text-defaulttextcolor ms-1">5Tb</span> -->
+                                                                </span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Registered office address
+                                                                    <!-- <span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">Unlimited</span> -->
+                                                                </span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">UK Business Stripe account
+                                                                    consultation</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Certificate of
+                                                                    Incorporation
+                                                                    <!-- <span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">24/7</span> -->
+                                                                </span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">
+
+                                                                    Company documents
+                                                                </span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Email support only</span>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="grid">
+                                                            <button type="button" class="ti-btn ti-btn-primary">Get
+                                                                Started</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="xxl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-4 sm:col-span-12 col-span-12 ps-0">
+                                                    <div class="p-6 pricing-offer overflow-hidden">
+                                                        <span class="pricing-offer-details shadow">
+                                                            <span class="font-semibold">10%</span> <span
+                                                                class="text-[0.625rem] op-8 ms-1">Off</span>
+                                                        </span>
+                                                        <h6 class="font-semibold text-center text-[1rem]">CANADA</h6>
+                                                        <div class="py-4 flex items-center justify-center">
+                                                            <div class="pricing-svg1">
+                                                                <span class="avatar avatar-md bg-info/10 icon-2">
+                                                                    <?xml version="1.0" encoding="utf-8"?><svg
+                                                                        version="1.1" id="Layer_1"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                        x="0px" y="0px" viewBox="0 0 55.2 38.4"
+                                                                        style="enable-background:new 0 0 55.2 38.4"
+                                                                        xml:space="preserve">
+                                                                        <style type="text/css">
+                                                                            .st0 {
+                                                                                fill: #FF0000;
+                                                                            }
+
+                                                                            .st1 {
+                                                                                fill: #FFFFFF;
+                                                                            }
+                                                                        </style>
+                                                                        <g>
+                                                                            <path class="st0"
+                                                                                d="M3.03,0h49.13c1.67,0,3.03,1.36,3.03,3.03v32.33c0,1.67-1.36,3.03-3.03,3.03H3.03C1.36,38.4,0,37.04,0,35.37 V3.03C0,1.36,1.36,0,3.03,0L3.03,0z" />
+                                                                            <polygon class="st1"
+                                                                                points="8.4,0 46.8,0 46.8,38.4 8.4,38.4 8.4,0" />
+                                                                            <path class="st0"
+                                                                                d="M27.6,3.6l-2.62,4.89c-0.3,0.53-0.83,0.48-1.37,0.18l-1.9-0.98l1.41,7.5c0.3,1.37-0.66,1.37-1.13,0.78 l-3.31-3.7l-0.53,1.88c-0.06,0.25-0.33,0.51-0.74,0.45l-4.18-0.88l1.1,4c0.24,0.89,0.42,1.26-0.24,1.49l-1.49,0.7l7.21,5.85 c0.29,0.22,0.43,0.62,0.32,0.98l-0.63,2.07c2.48-0.29,4.71-0.72,7.19-0.98c0.22-0.02,0.58,0.33,0.58,0.59L26.95,36h1.2l-0.19-7.56 c0-0.26,0.33-0.63,0.55-0.61c2.48,0.27,4.71,0.7,7.19,0.98l-0.64-2.08c-0.11-0.36,0.04-0.75,0.32-0.98l7.21-5.85l-1.49-0.7 c-0.66-0.24-0.48-0.6-0.24-1.49l1.1-4l-4.18,0.88c-0.41,0.06-0.68-0.2-0.74-0.45l-0.53-1.88l-3.31,3.7 c-0.47,0.59-1.42,0.59-1.13-0.78l1.41-7.5l-1.9,0.98c-0.53,0.3-1.07,0.34-1.37-0.18L27.6,3.6L27.6,3.6L27.6,3.6z M27.6,3.6 L27.6,3.6L27.6,3.6L27.6,3.6L27.6,3.6z" />
+                                                                        </g>
+                                                                    </svg>
+                                                                </span>
+                                                                <!-- <i class="bi bi-gem"></i> -->
+                                                            </div>
+                                                            <div class="text-end ms-5">
+                                                                <p
+                                                                    class="text-[1.5625rem] font-semibold mb-0 text-primary">
+                                                                    $1,299</p>
+                                                                <p
+                                                                    class="text-textmuted opacity-50 text-[.6875rem] font-semibold mb-0">
+                                                                    per month</p>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="list-none text-center text-[0.75rem] px-4 pt-4 mb-0">
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Storage Capacity<span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">10Tb</span></span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Daily Updates<span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">Unlimited</span></span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Online Support</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Visitors Monitoring<span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">24/7</span></span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">30 Free Domains</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Money Back Guarentee</span>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="grid">
+                                                            <button type="button"
+                                                                class="ti-btn bg-primary text-white">Get
+                                                                Started</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane !p-0 !border-0 border-b-0 dark:border-defaultborder/10 hidden"
+                                            id="pricing-yearly-pane" role="tabpanel" aria-labelledby="pricing-yearly"
+                                            tabindex="0">
+                                            <div class="grid grid-cols-12">
+                                                <div
+                                                    class="xxl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-4 sm:col-span-12  col-span-12 md:border-e md:border-b-0 border-b border-dashed dark:border-defaultborder/10 pe-0">
+                                                    <div class="p-6">
+                                                        <h6 class="font-semibold text-center text-[1rem]">UNITED STATES
+                                                        </h6>
+                                                        <div class="py-4 flex items-center justify-center">
+                                                            <div class="pricing-svg1">
+                                                                <span
+                                                                    class="avatar avatar-md bg-primary/10 mb-2 icon-1">
+                                                                    <?xml version="1.0" encoding="utf-8"?><svg
+                                                                        version="1.1" id="Layer_1"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                        x="0px" y="0px" viewBox="0 0 55.2 38.4"
+                                                                        style="enable-background:new 0 0 55.2 38.4"
+                                                                        xml:space="preserve">
+                                                                        <style type="text/css">
+                                                                            .st0 {
+                                                                                fill: #B22234;
+                                                                            }
+
+                                                                            .st1 {
+                                                                                fill: #FFFFFF;
+                                                                            }
+
+                                                                            .st2 {
+                                                                                fill: #3C3B6E;
+                                                                            }
+                                                                        </style>
+                                                                        <g>
+                                                                            <path class="st0"
+                                                                                d="M3.03,0h49.13c1.67,0,3.03,1.36,3.03,3.03v32.33c0,1.67-1.36,3.03-3.03,3.03H3.03C1.36,38.4,0,37.04,0,35.37 V3.03C0,1.36,1.36,0,3.03,0L3.03,0z" />
+                                                                            <path class="st1"
+                                                                                d="M0.02,2.73h55.17c0.01,0.1,0.02,0.2,0.02,0.31v2.94H0V3.03C0,2.93,0.01,2.83,0.02,2.73L0.02,2.73z M55.2,8.67 v3.24H0V8.67H55.2L55.2,8.67z M55.2,14.61v3.24H0v-3.24H55.2L55.2,14.61z M55.2,20.55v3.24H0v-3.24H55.2L55.2,20.55z M55.2,26.49 v3.24H0v-3.24H55.2L55.2,26.49z M55.2,32.43v2.93c0,0.1-0.01,0.21-0.02,0.31H0.02C0.01,35.58,0,35.47,0,35.37v-2.93H55.2 L55.2,32.43z" />
+                                                                            <path class="st2"
+                                                                                d="M20.8,0v20.68H0V3.03C0,1.36,1.36,0,3.03,0H20.8L20.8,0L20.8,0z" />
+                                                                            <polygon class="st1"
+                                                                                points="1.23,2.86 1.92,5.01 0.1,3.68 2.36,3.68 0.53,5.01 1.23,2.86" />
+                                                                            <polygon class="st1"
+                                                                                points="1.23,7.02 1.92,9.17 0.1,7.84 2.36,7.84 0.53,9.17 1.23,7.02" />
+                                                                            <polygon class="st1"
+                                                                                points="1.23,11.18 1.92,13.33 0.1,12 2.36,12 0.53,13.33 1.23,11.18" />
+                                                                            <polygon class="st1"
+                                                                                points="1.23,15.34 1.92,17.49 0.1,16.16 2.36,16.16 0.53,17.49 1.23,15.34" />
+                                                                            <polygon class="st1"
+                                                                                points="3.67,0.78 4.37,2.93 2.54,1.6 4.81,1.6 2.97,2.93 3.67,0.78" />
+                                                                            <polygon class="st1"
+                                                                                points="3.67,4.94 4.37,7.09 2.54,5.76 4.81,5.76 2.97,7.09 3.67,4.94" />
+                                                                            <polygon class="st1"
+                                                                                points="3.67,9.1 4.37,11.25 2.54,9.92 4.81,9.92 2.97,11.25 3.67,9.1" />
+                                                                            <polygon class="st1"
+                                                                                points="3.67,13.26 4.37,15.41 2.54,14.08 4.81,14.08 2.97,15.41 3.67,13.26" />
+                                                                            <polygon class="st1"
+                                                                                points="3.67,17.42 4.37,19.57 2.54,18.24 4.81,18.24 2.97,19.57 3.67,17.42" />
+                                                                            <polygon class="st1"
+                                                                                points="6.12,2.86 6.82,5.01 4.99,3.68 7.25,3.68 5.42,5.01 6.12,2.86" />
+                                                                            <polygon class="st1"
+                                                                                points="6.12,7.02 6.82,9.17 4.99,7.84 7.25,7.84 5.42,9.17 6.12,7.02" />
+                                                                            <polygon class="st1"
+                                                                                points="6.12,11.18 6.82,13.33 4.99,12 7.25,12 5.42,13.33 6.12,11.18" />
+                                                                            <polygon class="st1"
+                                                                                points="6.12,15.34 6.82,17.49 4.99,16.16 7.25,16.16 5.42,17.49 6.12,15.34" />
+                                                                            <polygon class="st1"
+                                                                                points="8.57,0.78 9.26,2.93 7.44,1.6 9.7,1.6 7.87,2.93 8.57,0.78" />
+                                                                            <polygon class="st1"
+                                                                                points="8.57,4.94 9.26,7.09 7.44,5.76 9.7,5.76 7.87,7.09 8.57,4.94" />
+                                                                            <polygon class="st1"
+                                                                                points="8.57,9.1 9.26,11.25 7.44,9.92 9.7,9.92 7.87,11.25 8.57,9.1" />
+                                                                            <polygon class="st1"
+                                                                                points="8.57,13.26 9.26,15.41 7.44,14.08 9.7,14.08 7.87,15.41 8.57,13.26" />
+                                                                            <polygon class="st1"
+                                                                                points="8.57,17.42 9.26,19.57 7.44,18.24 9.7,18.24 7.87,19.57 8.57,17.42" />
+                                                                            <polygon class="st1"
+                                                                                points="11.01,2.86 11.71,5.01 9.88,3.68 12.14,3.68 10.31,5.01 11.01,2.86" />
+                                                                            <polygon class="st1"
+                                                                                points="11.01,7.02 11.71,9.17 9.88,7.84 12.14,7.84 10.31,9.17 11.01,7.02" />
+                                                                            <polygon class="st1"
+                                                                                points="11.01,11.18 11.71,13.33 9.88,12 12.14,12 10.31,13.33 11.01,11.18" />
+                                                                            <polygon class="st1"
+                                                                                points="11.01,15.34 11.71,17.49 9.88,16.16 12.14,16.16 10.31,17.49 11.01,15.34" />
+                                                                            <polygon class="st1"
+                                                                                points="13.46,0.78 14.16,2.93 12.33,1.6 14.59,1.6 12.76,2.93 13.46,0.78" />
+                                                                            <polygon class="st1"
+                                                                                points="13.46,4.94 14.16,7.09 12.33,5.76 14.59,5.76 12.76,7.09 13.46,4.94" />
+                                                                            <polygon class="st1"
+                                                                                points="13.46,9.1 14.16,11.25 12.33,9.92 14.59,9.92 12.76,11.25 13.46,9.1" />
+                                                                            <polygon class="st1"
+                                                                                points="13.46,13.26 14.16,15.41 12.33,14.08 14.59,14.08 12.76,15.41 13.46,13.26" />
+                                                                            <polygon class="st1"
+                                                                                points="13.46,17.42 14.16,19.57 12.33,18.24 14.59,18.24 12.76,19.57 13.46,17.42" />
+                                                                            <polygon class="st1"
+                                                                                points="15.9,2.86 16.6,5.01 14.77,3.68 17.03,3.68 15.21,5.01 15.9,2.86" />
+                                                                            <polygon class="st1"
+                                                                                points="15.9,7.02 16.6,9.17 14.77,7.84 17.03,7.84 15.21,9.17 15.9,7.02" />
+                                                                            <polygon class="st1"
+                                                                                points="15.9,11.18 16.6,13.33 14.77,12 17.03,12 15.21,13.33 15.9,11.18" />
+                                                                            <polygon class="st1"
+                                                                                points="15.9,15.34 16.6,17.49 14.77,16.16 17.03,16.16 15.21,17.49 15.9,15.34" />
+                                                                            <polygon class="st1"
+                                                                                points="18.35,0.78 19.05,2.93 17.22,1.6 19.48,1.6 17.65,2.93 18.35,0.78" />
+                                                                            <polygon class="st1"
+                                                                                points="18.35,4.94 19.05,7.09 17.22,5.76 19.48,5.76 17.65,7.09 18.35,4.94" />
+                                                                            <polygon class="st1"
+                                                                                points="18.35,9.1 19.05,11.25 17.22,9.92 19.48,9.92 17.65,11.25 18.35,9.1" />
+                                                                            <polygon class="st1"
+                                                                                points="18.35,13.26 19.05,15.41 17.22,14.08 19.48,14.08 17.65,15.41 18.35,13.26" />
+                                                                            <polygon class="st1"
+                                                                                points="18.35,17.42 19.05,19.57 17.22,18.24 19.48,18.24 17.65,19.57 18.35,17.42" />
+                                                                        </g>
+                                                                    </svg>
+                                                                </span>
+                                                                <!-- <i class="bi bi-tags"></i> -->
+                                                            </div>
+                                                            <div class="text-end ms-5">
+                                                                <p class="text-[1.5625rem] font-semibold mb-0">$397
+                                                                </p>
+                                                                <p
+                                                                    class="text-textmuted opacity-50 text-[.6875rem] font-semibold mb-0">
+                                                                    and then $99/yr</p>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="list-none text-center text-[0.75rem] px-4 pt-4 mb-0">
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted"><b>Everything in Basic,
+                                                                        plus :</b>
+                                                                    <!-- <span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">1Tb</span> -->
+                                                                </span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">
+                                                                    Order priority
+                                                                    <!-- <span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">Unlimited</span> -->
+                                                                </span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">FREE Tax
+                                                                    consultation</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Chat and phone support
+                                                                    <!-- <span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">24/7</span> -->
+                                                                </span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">FREE US Phone number</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">
+                                                                    Dedicated account manager</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">
+
+                                                                    Professional company business website that's 100%
+                                                                    accepted</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">
+                                                                    FREE business email inbox</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">
+                                                                    FREE .com domain</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">
+                                                                    Business bank consultation</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">
+                                                                    3 Business logos</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">
+                                                                    Bonuses
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="grid">
+                                                            <button type="button" class="ti-btn ti-btn-primary">Get
+                                                                Started</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="xxl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-4 sm:col-span-12 col-span-12 md:border-e md:border-b-0 border-b border-dashed dark:border-defaultborder/10 px-0">
+                                                    <div class="p-6">
+                                                        <h6 class="font-semibold text-center text-[1rem]">UNITED KINGDOM
+                                                        </h6>
+                                                        <div class="py-4 flex items-center justify-center">
+                                                            <div class="pricing-svg1">
+                                                                 <span class="avatar avatar-md bg-danger/10 mb-2 icon-4">
+                                                                    <?xml version="1.0" encoding="utf-8"?><svg
+                                                                        version="1.1" id="Layer_1"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                        x="0px" y="0px" viewBox="0 0 55.2 38.4"
+                                                                        style="enable-background:new 0 0 55.2 38.4"
+                                                                        xml:space="preserve">
+                                                                        <style type="text/css">
+                                                                            .st0 {
+                                                                                fill: #FEFEFE;
+                                                                            }
+
+                                                                            .st1 {
+                                                                                fill: #C8102E;
+                                                                            }
+
+                                                                            .st2 {
+                                                                                fill: #012169;
+                                                                            }
+                                                                        </style>
+                                                                        <g>
+                                                                            <path class="st0"
+                                                                                d="M2.87,38.4h49.46c1.59-0.09,2.87-1.42,2.87-3.03V3.03c0-1.66-1.35-3.02-3.01-3.03H3.01 C1.35,0.01,0,1.37,0,3.03v32.33C0,36.98,1.28,38.31,2.87,38.4L2.87,38.4z" />
+                                                                            <polygon class="st1"
+                                                                                points="23.74,23.03 23.74,38.4 31.42,38.4 31.42,23.03 55.2,23.03 55.2,15.35 31.42,15.35 31.42,0 23.74,0 23.74,15.35 0,15.35 0,23.03 23.74,23.03" />
+                                                                            <path class="st2"
+                                                                                d="M33.98,12.43V0h18.23c1.26,0.02,2.34,0.81,2.78,1.92L33.98,12.43L33.98,12.43z" />
+                                                                            <path class="st2"
+                                                                                d="M33.98,25.97V38.4h18.35c1.21-0.07,2.23-0.85,2.66-1.92L33.98,25.97L33.98,25.97z" />
+                                                                            <path class="st2"
+                                                                                d="M21.18,25.97V38.4H2.87c-1.21-0.07-2.24-0.85-2.66-1.94L21.18,25.97L21.18,25.97z" />
+                                                                            <path class="st2"
+                                                                                d="M21.18,12.43V0H2.99C1.73,0.02,0.64,0.82,0.21,1.94L21.18,12.43L21.18,12.43z" />
+                                                                            <polygon class="st2"
+                                                                                points="0,12.8 7.65,12.8 0,8.97 0,12.8" />
+                                                                            <polygon class="st2"
+                                                                                points="55.2,12.8 47.51,12.8 55.2,8.95 55.2,12.8" />
+                                                                            <polygon class="st2"
+                                                                                points="55.2,25.6 47.51,25.6 55.2,29.45 55.2,25.6" />
+                                                                            <polygon class="st2"
+                                                                                points="0,25.6 7.65,25.6 0,29.43 0,25.6" />
+                                                                            <polygon class="st1"
+                                                                                points="55.2,3.25 36.15,12.8 40.41,12.8 55.2,5.4 55.2,3.25" />
+                                                                            <polygon class="st1"
+                                                                                points="19.01,25.6 14.75,25.6 0,32.98 0,35.13 19.05,25.6 19.01,25.6" />
+                                                                            <polygon class="st1"
+                                                                                points="10.52,12.81 14.78,12.81 0,5.41 0,7.55 10.52,12.81" />
+                                                                            <polygon class="st1"
+                                                                                points="44.63,25.59 40.37,25.59 55.2,33.02 55.2,30.88 44.63,25.59" />
+                                                                        </g>
+                                                                    </svg>
+                                                                </span>
+                                                                <!-- <i class="bi bi-hand-thumbs-up"></i> -->
+                                                            </div>
+                                                            <div class="text-end ms-5">
+                                                                <p class="text-[1.5625rem] font-semibold mb-0">$297
+                                                                </p>
+                                                                <p
+                                                                    class="text-textmuted opacity-50 text-[.6875rem] font-semibold mb-0">
+                                                                    and then $59/yr</p>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="list-none text-center text-[0.75rem] px-4 pt-4 mb-0">
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted"><b>Everything in Basic,
+                                                                        plus :</b>
+                                                                    <!-- <span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">5Tb</span> -->
+                                                                </span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Order priority
+                                                                    <!-- <span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">Unlimited</span> -->
+                                                                </span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Chat and phone
+                                                                    support</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">FREE UK Phone number
+                                                                    <!-- <span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">24/7</span> -->
+                                                                </span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Dedicated account
+                                                                    managers</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">FREE Business
+                                                                    website</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">FREE business email
+                                                                    inbox</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">FREE .com domain</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Business bank
+                                                                    consultation</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">
+                                                                    3 Business logos</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Bonuses</span>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="grid">
+                                                            <button type="button" class="ti-btn ti-btn-primary">Get
+                                                                Started</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="xxl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-4 sm:col-span-12 col-span-12 ps-0">
+                                                    <div class="p-6 pricing-offer overflow-hidden">
+                                                        <span class="pricing-offer-details shadow">
+                                                            <span class="font-semibold">10%</span> <span
+                                                                class="text-[0.625rem] op-8 ms-1">Off</span>
+                                                        </span>
+                                                        <h6 class="font-semibold text-center text-[1rem]">CANADA</h6>
+                                                        <div class="py-4 flex items-center justify-center">
+                                                            <div class="pricing-svg1">
+                                                                <span class="avatar avatar-md bg-info/10 icon-2">
+                                                                    <?xml version="1.0" encoding="utf-8"?><svg
+                                                                        version="1.1" id="Layer_1"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                        x="0px" y="0px" viewBox="0 0 55.2 38.4"
+                                                                        style="enable-background:new 0 0 55.2 38.4"
+                                                                        xml:space="preserve">
+                                                                        <style type="text/css">
+                                                                            .st0 {
+                                                                                fill: #FF0000;
+                                                                            }
+
+                                                                            .st1 {
+                                                                                fill: #FFFFFF;
+                                                                            }
+                                                                        </style>
+                                                                        <g>
+                                                                            <path class="st0"
+                                                                                d="M3.03,0h49.13c1.67,0,3.03,1.36,3.03,3.03v32.33c0,1.67-1.36,3.03-3.03,3.03H3.03C1.36,38.4,0,37.04,0,35.37 V3.03C0,1.36,1.36,0,3.03,0L3.03,0z" />
+                                                                            <polygon class="st1"
+                                                                                points="8.4,0 46.8,0 46.8,38.4 8.4,38.4 8.4,0" />
+                                                                            <path class="st0"
+                                                                                d="M27.6,3.6l-2.62,4.89c-0.3,0.53-0.83,0.48-1.37,0.18l-1.9-0.98l1.41,7.5c0.3,1.37-0.66,1.37-1.13,0.78 l-3.31-3.7l-0.53,1.88c-0.06,0.25-0.33,0.51-0.74,0.45l-4.18-0.88l1.1,4c0.24,0.89,0.42,1.26-0.24,1.49l-1.49,0.7l7.21,5.85 c0.29,0.22,0.43,0.62,0.32,0.98l-0.63,2.07c2.48-0.29,4.71-0.72,7.19-0.98c0.22-0.02,0.58,0.33,0.58,0.59L26.95,36h1.2l-0.19-7.56 c0-0.26,0.33-0.63,0.55-0.61c2.48,0.27,4.71,0.7,7.19,0.98l-0.64-2.08c-0.11-0.36,0.04-0.75,0.32-0.98l7.21-5.85l-1.49-0.7 c-0.66-0.24-0.48-0.6-0.24-1.49l1.1-4l-4.18,0.88c-0.41,0.06-0.68-0.2-0.74-0.45l-0.53-1.88l-3.31,3.7 c-0.47,0.59-1.42,0.59-1.13-0.78l1.41-7.5l-1.9,0.98c-0.53,0.3-1.07,0.34-1.37-0.18L27.6,3.6L27.6,3.6L27.6,3.6z M27.6,3.6 L27.6,3.6L27.6,3.6L27.6,3.6L27.6,3.6z" />
+                                                                        </g>
+                                                                    </svg>
+                                                                </span>
+                                                                <!-- <i class="bi bi-gem"></i> -->
+                                                            </div>
+                                                            <div class="text-end ms-5">
+                                                                <p
+                                                                    class="text-[1.5625rem] font-semibold mb-0 text-primary">
+                                                                    $11,499</p>
+                                                                <p
+                                                                    class="text-textmuted opacity-50 text-[.6875rem] font-semibold mb-0">
+                                                                    per Year</p>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="list-none text-center text-[0.75rem] px-4 pt-4 mb-0">
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Storage Capacity<span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">10Tb</span></span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Daily Updates<span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">Unlimited</span></span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Online Support</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Visitors Monitoring<span
+                                                                        class="badge bg-light text-defaulttextcolor ms-1">24/7</span></span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">30 Free Domains</span>
+                                                            </li>
+                                                            <li class="mb-4">
+                                                                <span class="text-textmuted">Money Back Guarentee</span>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="grid">
+                                                            <button type="button"
+                                                                class="ti-btn bg-primary text-white">Get
+                                                                Started</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xxl:col-span-2 col-span-12"></div>
+                </div>
+                <!-- End:: row-2 -->
+
+                <!-- Start::row-3 -->
+
+                <!-- End::row-3 -->
+
+                <!-- Start::row-3 -->
+
+                <!--End::row-3 -->
+
+
+            </div>
+        </div>
+        <!-- End::content  -->
+
+         <!-- Footer opened -->
+
+        <footer
+            class="footer mt-auto xl:ps-[15rem]  font-normal font-inter bg-white  leading-normal !text-[0.875rem] shadow-[0_0_0.4rem_rgba(0,0,0,0.1)] dark:bg-bodybg py-4 text-center">
+            <div class="container">
+                <span class="text-gray dark:text-defaulttextcolor/50"> Copyright © <span id="year"></span> <a
+                        href="javascript:void(0);"
+                        class="text-defaulttextcolor font-semibold dark:text-defaulttextcolor">FormationsHQ</a>.
+                    Designed with <span class="bi bi-heart-fill text-danger"></span> by <a
+                        href="https://zentedge.com.ng/" target="_blank">
+                        <span class="font-semibold text-primary underline">Zentedge Solutions</span>
+                    </a> All
+                    rights
+                    reserved
+                </span>
+            </div>
+        </footer> <!-- End Footer -->
+
+        <!--    -->
+
+    </div>
+
+    <!-- Scripts-->
+
+    <!-- Back To Top -->
+    <div class="scrollToTop">
+        <span class="arrow"><i class="ri-arrow-up-s-fill text-xl"></i></span>
+    </div>
+
+    <div id="responsive-overlay"></div>
+
+    <!-- popperjs -->
+    <script src="../assets/libs/%40popperjs/core/umd/popper.min.js"></script>
+
+    <!-- Color Picker JS -->
+    <script src="../assets/libs/%40simonwep/pickr/pickr.es5.min.js"></script>
+
+    <!-- Switch JS -->
+    <script src="../assets/js/switch.js"></script>
+
+    <!-- Simplebar JS -->
+    <script src="../assets/libs/simplebar/simplebar.min.js"></script>
+
+    <!-- Preline JS -->
+    <script src="../assets/libs/preline/preline.js"></script>
+
+
+
+
+    <!-- Sticky JS -->
+    <script src="../assets/js/sticky.js"></script>
+
+    <!-- Defaultmenu JS -->
+    <script src="../assets/js/defaultmenu.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom.js"></script>
+
+    <!-- Custom-Switcher JS -->
+    <script src="../assets/js/custom-switcher.js"></script>
+
+</body>
+
+
+</html>
