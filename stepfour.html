@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  data-nav-layout="vertical"
+  class="light"
+  data-header-styles="light"
+  data-menu-styles="light"
+>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="Spruko Technologies Private Limited" />
+    <meta
+      name="description"
+      content="A Tailwind CSS admin template is a pre-designed web page for an admin dashboard. Optimizing it for SEO includes using meta descriptions and ensuring it's responsive and fast-loading."
+    />
+    <meta
+      name="keywords"
+      content="php, php template, admin, dashboard php, tailwind dashboard template, php dashboard, dashboard, template dashboard, template admin, tailwind, admin dashboard, php admin, dashboard css, admin template, dashboard template, bootstrap admin template."
+    />
+
+    <!-- Title -->
+    <title>FormationsHQ</title>
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="\assets\images\brand-logos\formationshq-logo-3.png"
+    />
+
+    <!-- Main Theme Js -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Icons CSS -->
+    <link href="../assets/css/icons.css" rel="stylesheet" />
+
+    <!-- Styles CSS -->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+
+    <!-- Simplebar Css -->
+    <link rel="stylesheet" href="../assets/libs/simplebar/simplebar.min.css" />
+
+    <!-- Color Picker Css -->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/%40simonwep/pickr/themes/nano.min.css"
+    />
+
+    <!-- Jsvector Maps -->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/jsvectormap/css/jsvectormap.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+    
+     <style>
+  @media (max-width: 768px) {
+    .step-four-container {
+      padding: 16px !important;
+    }
+    .summary-cards-grid {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+    .mobile-step-indicator-four {
+      display: block !important;
+    }
+    .summary-illustration {
+      width: 80px !important;
+      height: 80px !important;
+    }
+    .summary-title {
+      font-size: 24px !important;
+    }
+    .summary-subtitle {
+      font-size: 14px !important;
+    }
+    .button-group-four {
+      flex-direction: column !important;
+      gap: 12px !important;
+    }
+    .button-group-four button {
+      width: 100% !important;
+    }
+    .download-button {
+      width: 100% !important;
+    }
+  }
+  
+  .mobile-step-indicator-four {
+    display: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111827;
+    margin-bottom: 24px;
+  }
+
+  .summary-card {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .summary-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #6366f1;
+    margin-bottom: 16px;
+  }
+
+  .summary-card-content {
+    flex: 1;
+    margin-bottom: 16px;
+  }
+
+  .summary-item {
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .category-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #eef2ff;
+    color: #6366f1;
+    border: 1px solid #c7d2fe;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .donut-chart {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 16px;
+  }
+
+  .edit-button {
+    width: 100%;
+    padding: 10px 16px;
+    background-color: white;
+    color: #6366f1;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s;
+  }
+
+  .edit-button:hover {
+    background-color: #f9fafb;
+    border-color: #d1d5db;
+  }
+</style>
+
+  <body class="">
+    <!-- Switcher -->
+
+    <div
+      id="hs-overlay-switcher"
+      class="hs-overlay hidden ti-offcanvas ti-offcanvas-right !border-0"
+      tabindex="-1"
+    >
+      <div class="ti-offcanvas-header z-10 relative">
+        <h5 class="ti-offcanvas-title">Switcher</h5>
+        <button
+          type="button"
+          class="ti-btn flex-shrink-0 p-0 transition-none text-defaulttextcolor dark:text-defaulttextcolor/70 hover:text-gray-700 focus:ring-gray-400 focus:ring-offset-white dark:hover:text-white/80 dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
+          data-hs-overlay="#hs-overlay-switcher"
+        >
+          <span class="sr-only">Close modal</span>
+          <i class="ri-close-circle-line leading-none text-lg"></i>
+        </button>
+      </div>
+      <div
+        class="ti-offcanvas-body !p-0 !border-b dark:border-white/10 z-10 relative !h-auto"
+      >
+        <div
+          class="flex rtl:space-x-reverse"
+          aria-label="Tabs"
+          role="tablist"
+          role="tablist"
+        >
+          <button
+            type="button"
+            class="hs-tab-active:bg-success/20 w-full !py-2 !px-4 hs-tab-active:border-b-transparent text-defaultsize border-0 hs-tab-active:text-success dark:hs-tab-active:bg-success/20 dark:hs-tab-active:border-b-white/10 dark:hs-tab-active:text-success -mb-px bg-white font-semibold text-center text-defaulttextcolor dark:text-defaulttextcolor/70 rounded-none hover:text-gray-700 dark:bg-bodybg dark:border-white/10 active"
+            id="switcher-item-1"
+            data-hs-tab="#switcher-1"
+            aria-controls="switcher-1"
+            role="tab"
+          >
+            Theme Style
+          </button>
+          <button
+            type="button"
+            class="hs-tab-active:bg-success/20 w-full !py-2 !px-4 hs-tab-active:border-b-transparent text-defaultsize border-0 hs-tab-active:text-success dark:hs-tab-active:bg-success/20 dark:hs-tab-active:border-b-white/10 dark:hs-tab-active:text-success -mb-px bg-white font-semibold text-center text-defaulttextcolor dark:text-defaulttextcolor/70 rounded-none hover:text-gray-700 dark:bg-bodybg dark:border-white/10 dark:hover:text-gray-300"
+            id="switcher-item-2"
+            data-hs-tab="#switcher-2"
+            aria-controls="switcher-2"
+            role="tab"
+          >
+            Theme Colors
+          </button>
+        </div>
+      </div>
+      <div class="ti-offcanvas-body !h-full overflow-auto" id="switcher-body">
+        <div
+          id="switcher-1"
+          role="tabpanel"
+          aria-labelledby="switcher-item-1"
+          class="space-y-6"
+        >
+          <div>
+            <p class="switcher-style-head">Theme Color Mode:</p>
+            <div class="grid grid-cols-3 switcher-style">
+              <div class="flex items-center">
+                <input
+                  type="radio"
+                  name="theme-style"
+                  class="ti-form-radio"
+                  id="switcher-light-theme"
+                  checked
+                />
+                <label
+                  for="switcher-light-theme"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Light</label
+                >
+              </div>
+              <div class="flex items-center">
+                <input
+                  type="radio"
+                  name="theme-style"
+                  class="ti-form-radio"
+                  id="switcher-dark-theme"
+                />
+                <label
+                  for="switcher-dark-theme"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Dark</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="!mt-0">
+            <p class="switcher-style-head">Directions:</p>
+            <div class="grid grid-cols-3 switcher-style">
+              <div class="flex items-center">
+                <input
+                  type="radio"
+                  name="direction"
+                  class="ti-form-radio"
+                  id="switcher-ltr"
+                  checked
+                />
+                <label
+                  for="switcher-ltr"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >LTR</label
+                >
+              </div>
+              <div class="flex items-center">
+                <input
+                  type="radio"
+                  name="direction"
+                  class="ti-form-radio"
+                  id="switcher-rtl"
+                />
+                <label
+                  for="switcher-rtl"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >RTL</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="!mt-0">
+            <p class="switcher-style-head">Navigation Styles:</p>
+            <div class="grid grid-cols-3 switcher-style">
+              <div class="flex items-center">
+                <input
+                  type="radio"
+                  name="navigation-style"
+                  class="ti-form-radio"
+                  id="switcher-vertical"
+                  checked
+                />
+                <label
+                  for="switcher-vertical"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Vertical</label
+                >
+              </div>
+              <div class="flex items-center">
+                <input
+                  type="radio"
+                  name="navigation-style"
+                  class="ti-form-radio"
+                  id="switcher-horizontal"
+                />
+                <label
+                  for="switcher-horizontal"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Horizontal</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="!mt-0 navigation-menu-styles">
+            <p class="switcher-style-head">Navigation Menu Style:</p>
+            <div class="grid grid-cols-2 gap-2 switcher-style">
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="navigation-data-menu-styles"
+                  class="ti-form-radio"
+                  id="switcher-menu-click"
+                />
+                <label
+                  for="switcher-menu-click"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Menu Click</label
+                >
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="navigation-data-menu-styles"
+                  class="ti-form-radio"
+                  id="switcher-menu-hover"
+                />
+                <label
+                  for="switcher-menu-hover"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Menu Hover</label
+                >
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="navigation-data-menu-styles"
+                  class="ti-form-radio"
+                  id="switcher-icon-click"
+                />
+                <label
+                  for="switcher-icon-click"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Icon Click</label
+                >
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="navigation-data-menu-styles"
+                  class="ti-form-radio"
+                  id="switcher-icon-hover"
+                />
+                <label
+                  for="switcher-icon-hover"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Icon Hover</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="!mt-0 sidemenu-layout-styles">
+            <p class="switcher-style-head">Sidemenu Layout Syles:</p>
+            <div class="grid grid-cols-2 gap-2 switcher-style">
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="sidemenu-layout-styles"
+                  class="ti-form-radio"
+                  id="switcher-default-menu"
+                  checked
+                />
+                <label
+                  for="switcher-default-menu"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Default Menu</label
+                >
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="sidemenu-layout-styles"
+                  class="ti-form-radio"
+                  id="switcher-closed-menu"
+                />
+                <label
+                  for="switcher-closed-menu"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                >
+                  Closed Menu</label
+                >
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="sidemenu-layout-styles"
+                  class="ti-form-radio"
+                  id="switcher-icontext-menu"
+                />
+                <label
+                  for="switcher-icontext-menu"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Icon Text</label
+                >
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="sidemenu-layout-styles"
+                  class="ti-form-radio"
+                  id="switcher-icon-overlay"
+                />
+                <label
+                  for="switcher-icon-overlay"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Icon Overlay</label
+                >
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="sidemenu-layout-styles"
+                  class="ti-form-radio"
+                  id="switcher-detached"
+                />
+                <label
+                  for="switcher-detached"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Detached</label
+                >
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="sidemenu-layout-styles"
+                  class="ti-form-radio"
+                  id="switcher-double-menu"
+                />
+                <label
+                  for="switcher-double-menu"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Double Menu</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="!mt-0">
+            <p class="switcher-style-head">Page Styles:</p>
+            <div class="grid grid-cols-3 switcher-style">
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="data-page-styles"
+                  class="ti-form-radio"
+                  id="switcher-regular"
+                  checked
+                />
+                <label
+                  for="switcher-regular"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Regular</label
+                >
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="data-page-styles"
+                  class="ti-form-radio"
+                  id="switcher-classic"
+                />
+                <label
+                  for="switcher-classic"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Classic</label
+                >
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="data-page-styles"
+                  class="ti-form-radio"
+                  id="switcher-modern"
+                />
+                <label
+                  for="switcher-modern"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                >
+                  Modern</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="!mt-0">
+            <p class="switcher-style-head">Layout Width Styles:</p>
+            <div class="grid grid-cols-3 switcher-style">
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="layout-width"
+                  class="ti-form-radio"
+                  id="switcher-full-width"
+                  checked
+                />
+                <label
+                  for="switcher-full-width"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >FullWidth</label
+                >
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="layout-width"
+                  class="ti-form-radio"
+                  id="switcher-boxed"
+                />
+                <label
+                  for="switcher-boxed"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Boxed</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="!mt-0">
+            <p class="switcher-style-head">Menu Positions:</p>
+            <div class="grid grid-cols-3 switcher-style">
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="data-menu-positions"
+                  class="ti-form-radio"
+                  id="switcher-menu-fixed"
+                  checked
+                />
+                <label
+                  for="switcher-menu-fixed"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Fixed</label
+                >
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="data-menu-positions"
+                  class="ti-form-radio"
+                  id="switcher-menu-scroll"
+                />
+                <label
+                  for="switcher-menu-scroll"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Scrollable
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="!mt-0">
+            <p class="switcher-style-head">Header Positions:</p>
+            <div class="grid grid-cols-3 switcher-style">
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="data-header-positions"
+                  class="ti-form-radio"
+                  id="switcher-header-fixed"
+                  checked
+                />
+                <label
+                  for="switcher-header-fixed"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                >
+                  Fixed</label
+                >
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="data-header-positions"
+                  class="ti-form-radio"
+                  id="switcher-header-scroll"
+                />
+                <label
+                  for="switcher-header-scroll"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Scrollable
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="!mt-0">
+            <p class="switcher-style-head">Loader:</p>
+            <div class="grid grid-cols-3 switcher-style">
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="page-loader"
+                  class="ti-form-radio"
+                  id="switcher-loader-enable"
+                  checked
+                />
+                <label
+                  for="switcher-loader-enable"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                >
+                  Enable</label
+                >
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="page-loader"
+                  class="ti-form-radio"
+                  id="switcher-loader-disable"
+                />
+                <label
+                  for="switcher-loader-disable"
+                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  >Disable
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="switcher-2"
+          class="hidden"
+          role="tabpanel"
+          aria-labelledby="switcher-item-2"
+        >
+          <div class="theme-colors">
+            <p class="switcher-style-head">Menu Colors:</p>
+            <div class="flex switcher-style space-x-3 rtl:space-x-reverse">
+              <div
+                class="hs-tooltip ti-main-tooltip ti-form-radio switch-select"
+              >
+                <input
+                  class="hs-tooltip-toggle ti-form-radio color-input color-white"
+                  type="radio"
+                  name="menu-colors"
+                  id="switcher-menu-light"
+                  checked
+                />
+                <span
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  role="tooltip"
+                >
+                  Light Menu
+                </span>
+              </div>
+              <div
+                class="hs-tooltip ti-main-tooltip ti-form-radio switch-select"
+              >
+                <input
+                  class="hs-tooltip-toggle ti-form-radio color-input color-dark"
+                  type="radio"
+                  name="menu-colors"
+                  id="switcher-menu-dark"
+                />
+                <span
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  role="tooltip"
+                >
+                  Dark Menu
+                </span>
+              </div>
+              <div
+                class="hs-tooltip ti-main-tooltip ti-form-radio switch-select"
+              >
+                <input
+                  class="hs-tooltip-toggle ti-form-radio color-input color-primary"
+                  type="radio"
+                  name="menu-colors"
+                  id="switcher-menu-primary"
+                />
+                <span
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  role="tooltip"
+                >
+                  Color Menu
+                </span>
+              </div>
+              <div
+                class="hs-tooltip ti-main-tooltip ti-form-radio switch-select"
+              >
+                <input
+                  class="hs-tooltip-toggle ti-form-radio color-input color-gradient"
+                  type="radio"
+                  name="menu-colors"
+                  id="switcher-menu-gradient"
+                />
+                <span
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  role="tooltip"
+                >
+                  Gradient Menu
+                </span>
+              </div>
+              <div
+                class="hs-tooltip ti-main-tooltip ti-form-radio switch-select"
+              >
+                <input
+                  class="hs-tooltip-toggle ti-form-radio color-input color-transparent"
+                  type="radio"
+                  name="menu-colors"
+                  id="switcher-menu-transparent"
+                />
+                <span
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  role="tooltip"
+                >
+                  Transparent Menu
+                </span>
+              </div>
+            </div>
+            <div class="px-4 text-textmuted text-[.6875rem] !mb-3">
+              <b class="me-2">Note:</b>If you want to change color Menu
+              dynamically change from below Theme Primary color picker.
+            </div>
+          </div>
+          <div class="theme-colors">
+            <p class="switcher-style-head">Header Colors:</p>
+            <div class="flex switcher-style space-x-3 rtl:space-x-reverse">
+              <div
+                class="hs-tooltip ti-main-tooltip ti-form-radio switch-select"
+              >
+                <input
+                  class="hs-tooltip-toggle ti-form-radio color-input color-white !border"
+                  type="radio"
+                  name="header-colors"
+                  id="switcher-header-light"
+                  checked
+                />
+                <span
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  role="tooltip"
+                >
+                  Light Header
+                </span>
+              </div>
+              <div
+                class="hs-tooltip ti-main-tooltip ti-form-radio switch-select"
+              >
+                <input
+                  class="hs-tooltip-toggle ti-form-radio color-input color-dark"
+                  type="radio"
+                  name="header-colors"
+                  id="switcher-header-dark"
+                />
+                <span
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  role="tooltip"
+                >
+                  Dark Header
+                </span>
+              </div>
+              <div
+                class="hs-tooltip ti-main-tooltip ti-form-radio switch-select"
+              >
+                <input
+                  class="hs-tooltip-toggle ti-form-radio color-input color-primary"
+                  type="radio"
+                  name="header-colors"
+                  id="switcher-header-primary"
+                />
+                <span
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  role="tooltip"
+                >
+                  Color Header
+                </span>
+              </div>
+              <div
+                class="hs-tooltip ti-main-tooltip ti-form-radio switch-select"
+              >
+                <input
+                  class="hs-tooltip-toggle ti-form-radio color-input color-gradient"
+                  type="radio"
+                  name="header-colors"
+                  id="switcher-header-gradient"
+                />
+                <span
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  role="tooltip"
+                >
+                  Gradient Header
+                </span>
+              </div>
+              <div
+                class="hs-tooltip ti-main-tooltip ti-form-radio switch-select"
+              >
+                <input
+                  class="hs-tooltip-toggle ti-form-radio color-input color-transparent"
+                  type="radio"
+                  name="header-colors"
+                  id="switcher-header-transparent"
+                />
+                <span
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  role="tooltip"
+                >
+                  Transparent Header
+                </span>
+              </div>
+            </div>
+            <div class="px-4 text-textmuted text-[.6875rem] !mb-3">
+              <b class="me-2">Note:</b>If you want to change color Header
+              dynamically change from below Theme Primary color picker.
+            </div>
+          </div>
+          <div class="theme-colors">
+            <p class="switcher-style-head">Theme Primary:</p>
+            <div class="flex switcher-style space-x-3 rtl:space-x-reverse">
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio color-input color-primary-1"
+                  type="radio"
+                  name="theme-primary"
+                  id="switcher-primary"
+                  checked
+                />
+              </div>
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio color-input color-primary-2"
+                  type="radio"
+                  name="theme-primary"
+                  id="switcher-primary1"
+                />
+              </div>
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio color-input color-primary-3"
+                  type="radio"
+                  name="theme-primary"
+                  id="switcher-primary2"
+                />
+              </div>
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio color-input color-primary-4"
+                  type="radio"
+                  name="theme-primary"
+                  id="switcher-primary3"
+                />
+              </div>
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio color-input color-primary-5"
+                  type="radio"
+                  name="theme-primary"
+                  id="switcher-primary4"
+                />
+              </div>
+              <div
+                class="ti-form-radio switch-select ps-0 mt-1 color-primary-light"
+              >
+                <div class="theme-container-primary"></div>
+                <div class="pickr-container-primary"></div>
+              </div>
+            </div>
+          </div>
+          <div class="theme-colors">
+            <p class="switcher-style-head">Theme Background:</p>
+            <div class="flex switcher-style space-x-3 rtl:space-x-reverse">
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio color-input color-bg-1"
+                  type="radio"
+                  name="theme-background"
+                  id="switcher-background"
+                  checked
+                />
+              </div>
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio color-input color-bg-2"
+                  type="radio"
+                  name="theme-background"
+                  id="switcher-background1"
+                />
+              </div>
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio color-input color-bg-3"
+                  type="radio"
+                  name="theme-background"
+                  id="switcher-background2"
+                />
+              </div>
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio color-input color-bg-4"
+                  type="radio"
+                  name="theme-background"
+                  id="switcher-background3"
+                />
+              </div>
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio color-input color-bg-5"
+                  type="radio"
+                  name="theme-background"
+                  id="switcher-background4"
+                />
+              </div>
+              <div
+                class="ti-form-radio switch-select ps-0 mt-1 color-bg-transparent"
+              >
+                <div class="theme-container-background hidden"></div>
+                <div class="pickr-container-background"></div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-image theme-colors">
+            <p class="switcher-style-head">Menu With Background Image:</p>
+            <div
+              class="flex switcher-style space-x-3 rtl:space-x-reverse flex-wrap gap-3"
+            >
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio bgimage-input bg-img1"
+                  type="radio"
+                  name="theme-images"
+                  id="switcher-bg-img"
+                />
+              </div>
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio bgimage-input bg-img2"
+                  type="radio"
+                  name="theme-images"
+                  id="switcher-bg-img1"
+                />
+              </div>
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio bgimage-input bg-img3"
+                  type="radio"
+                  name="theme-images"
+                  id="switcher-bg-img2"
+                />
+              </div>
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio bgimage-input bg-img4"
+                  type="radio"
+                  name="theme-images"
+                  id="switcher-bg-img3"
+                />
+              </div>
+              <div class="ti-form-radio switch-select">
+                <input
+                  class="ti-form-radio bgimage-input bg-img5"
+                  type="radio"
+                  name="theme-images"
+                  id="switcher-bg-img4"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ti-offcanvas-footer gap-4 sm:flex justify-between">
+        <a
+          href="https://1.envato.market/7axkzO"
+          target="_blank"
+          class="w-full ti-btn ti-btn-primary-full m-1"
+          >Buy Now</a
+        >
+        <a
+          href="https://1.envato.market/MGEaN"
+          target="_blank"
+          class="w-full ti-btn ti-btn-info-full m-1"
+          >Our Portfolio</a
+        >
+        <a
+          href="javascript:void(0);"
+          id="reset-all"
+          class="w-full ti-btn ti-btn-danger-full m-1"
+          >Reset</a
+        >
+      </div>
+    </div>
+    <!-- End switcher -->
+
+    <!-- Loader -->
+    <div id="loader">
+      <img
+        src="https://php.spruko.com/tailwind/valex/valex/assets/images/media/loader.svg"
+        alt=""
+      />
+    </div>
+    <!-- Loader -->
+
+    <div class="page">
+      <!-- Main-Header -->
+
+      <header class="app-header">
+        <nav class="main-header" aria-label="Global">
+          <!-- mobile header -->
+          <div class="main-header-container !px-[0.85rem]">
+            <div class="header-content-left">
+              <!-- Start::header-element -->
+              <div class="header-element">
+                <div class="horizontal-logo">
+                  <a href="index.html" class="header-logo">
+                    <img
+                      src="../assets/images/brand-logos/formationshq-logo-3.png"
+                      alt="logo"
+                      class="desktop-logo"
+                    />
+                    <img
+                      src="../assets/images/brand-logos/formationshq-logo-3.png"
+                      alt="logo"
+                      class="toggle-logo"
+                    />
+                    <img
+                      src="../assets/images/brand-logos/formationshq-logo-3.png"
+                      alt="logo"
+                      class="desktop-dark"
+                    />
+                    <img
+                      src="../assets/images/brand-logos/formationshq-logo-3.png"
+                      alt="logo"
+                      class="toggle-dark"
+                    />
+                    <img
+                      src="../assets/images/brand-logos/formationshq-logo-3.png"
+                      alt="logo"
+                      class="desktop-white"
+                    />
+                  </a>
+                </div>
+              </div>
+              <!-- End::header-element -->
+
+              <!-- End::header-element -->
+              <div class="header-element !items-center">
+                <!-- Start::header-link -->
+                <a
+                  aria-label="Hide Sidebar"
+                  class="sidemenu-toggle animated-arrow header-link hor-toggle horizontal-navtoggle inline-flex items-center"
+                  href="javascript:void(0);"
+                  ><i class="header-icon fe fe-align-left"></i
+                ></a>
+                <div class="main-header-center hidden lg:block">
+                  <input
+                    class="form-control placeholder:!text-headerprimecolor placeholder:opacity-70 placeholder:font-thin placeholder:text-sm"
+                    placeholder="Search for anything..."
+                    type="search"
+                  />
+                  <button class="btn">
+                    <i class="fa fa-search hidden md:block opacity-[0.5]"></i>
+                  </button>
+                </div>
+                <!-- End::header-link -->
+              </div>
+            </div>
+            <div class="header-content-right">
+              <div
+                class="header-element hs-dropdown search-dropdown ti-dropdown lg:!hidden [--auto-close:inside]"
+              >
+                <a
+                  href="javascript:void(0);"
+                  class="header-link dropdown-toggle"
+                  id="hs-dropdown-auto-close-inside"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 -960 960 960"
+                    class="header-link-icon"
+                  >
+                    <path
+                      d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+                    ></path>
+                  </svg>
+                </a>
+
+                <div
+                  class="hs-dropdown-menu ti-dropdown-menu hidden"
+                  aria-labelledby="hs-dropdown-auto-close-inside"
+                >
+                  <div>
+                    <div class="input-group w-full p-2">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Search...."
+                      />
+                      <div class="ti-btn ti-btn-primary-full !mb-0">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- light and dark theme -->
+              <div
+                class="header-element header-theme-mode hidden !items-center sm:block !py-[1rem] !px-[0.65rem]"
+              >
+                <a
+                  aria-label="anchor"
+                  class="hs-dark-mode-active:hidden flex hs-dark-mode group flex-shrink-0 justify-center items-center gap-2 rounded-full font-medium transition-all text-xs dark:bg-bodybg dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
+                  href="javascript:void(0);"
+                  data-hs-theme-click-value="dark"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="header-link-icon"
+                    height="24"
+                    viewBox="0 -960 960 960"
+                    width="24"
+                  >
+                    <path
+                      d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  aria-label="anchor"
+                  class="hs-dark-mode-active:flex hidden hs-dark-mode group flex-shrink-0 justify-center items-center gap-2 rounded-full font-medium text-defaulttextcolor transition-all text-xs dark:bg-bodybg dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
+                  href="javascript:void(0);"
+                  data-hs-theme-click-value="light"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="header-link-icon"
+                    fill="currentColor"
+                    height="24"
+                    viewBox="0 -960 960 960"
+                    width="24"
+                  >
+                    <path
+                      d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <!-- End light and dark theme -->
+
+              <!-- End::header-element -->
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- End Main-Header -->
+
+      <!-- Country-selector modal -->
+
+      >
+
+      <!-- End Country-selector modal -->
+
+      <!--Main-Sidebar-->
+
+      <aside class="app-sidebar" id="sidebar">
+        <!-- Start::main-sidebar-header -->
+        <div class="main-sidebar-header">
+          <a href="index.html" class="header-logo">
+            <img
+              src="../assets/images/brand-logos/formationshq-logo-3.png"
+              alt="logo"
+              class="desktop-logo"
+            />
+            <img
+              src="../assets/images/brand-logos/formationshq-logo-3.png"
+              alt="logo"
+              class="toggle-logo"
+            />
+            <img
+              src="../assets/images/brand-logos/formationshq-logo-3.png"
+              alt="logo"
+              class="desktop-dark"
+            />
+            <img
+              src="../assets/images/brand-logos/formationshq-logo-3.png"
+              alt="logo"
+              class="toggle-dark"
+            />
+            <img
+              src="../assets/images/brand-logos/formationshq-logo-3.png"
+              alt="logo"
+              class="desktop-white"
+            />
+          </a>
+        </div>
+        <!-- End::main-sidebar-header -->
+
+        <!-- Start::main-sidebar -->
+        <div class="main-sidebar" id="sidebar-scroll">
+          <!-- Start::nav -->
+          <nav class="main-menu-container nav nav-pills flex-column sub-open">
+            <div class="slide-left" id="slide-left">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#7b8191"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
+                ></path>
+              </svg>
+            </div>
+            <ul class="main-menu">
+              <li class="slide has-sub">
+                <a href="index.html" class="side-menu__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="side-menu__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path
+                      d="M5 5h4v6H5zm10 8h4v6h-4zM5 17h4v2H5zM15 5h4v2h-4z"
+                      opacity=".3"
+                    />
+                    <path
+                      d="M3 13h8V3H3v10zm2-8h4v6H5V5zm8 16h8V11h-8v10zm2-8h4v6h-4v-6zM13 3v6h8V3h-8zm6 4h-4V5h4v2zM3 21h8v-6H3v6zm2-4h4v2H5v-2z"
+                    />
+                  </svg>
+                  <span class="side-menu__label">DASHBOARD</span>
+                  <!-- <i class="fe fe-chevron-right side-menu__angle"></i> -->
+                </a>
+                <ul class="slide-menu child1">
+                  <!-- <li class="slide side-menu__label1">
+										<a href="javascript:void(0);">DASHBOARD</a>
+									</li> -->
+                  <!-- <li class="slide">
+										<a href="index.html" class="side-menu__item">Sales</a>
+									</li> -->
+
+                  <!-- <li class="slide">
+										<a href="index2.html" class="side-menu__item">DASHBOARD</a>
+									</li> -->
+                </ul>
+              </li>
+
+              <!-- Start::slide__category -->
+              <li class="slide__category">
+                <span class="category-name">MARKET PLACE</span>
+              </li>
+              <!-- End::slide__category -->
+
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="cards.html" class="side-menu__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="side-menu__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M21.9 8.89l-1.05-4.37c-.22-.9-1-1.52-1.91-1.52H5.05c-.9 0-1.69.63-1.9 1.52L2.1 8.89c-.24 1.02-.02 2.06.62 2.88.08.11.19.19.28.29V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6.94c.09-.09.2-.18.28-.28.64-.82.87-1.87.62-2.89zm-2.99-3.9l1.05 4.37c.1.42.01.84-.25 1.17-.14.18-.44.47-.94.47-.61 0-1.14-.49-1.21-1.14L16.98 5l1.93-.01zM13 5h1.96l.54 4.52c.05.39-.07.78-.33 1.07-.22.26-.54.41-.95.41-.67 0-1.22-.59-1.22-1.31V5zM8.49 9.52L9.04 5H11v4.69c0 .72-.55 1.31-1.29 1.31-.34 0-.65-.15-.89-.41-.25-.29-.37-.68-.33-1.07zm-4.45-.16L5.05 5h1.97l-.58 4.86c-.08.65-.6 1.14-1.21 1.14-.49 0-.8-.29-.93-.47-.27-.32-.36-.75-.26-1.17zM5 19v-6.03c.08.01.15.03.23.03.87 0 1.66-.36 2.24-.95.6.6 1.4.95 2.31.95.87 0 1.65-.36 2.23-.93.59.57 1.39.93 2.29.93.84 0 1.64-.35 2.24-.95.58.59 1.37.95 2.24.95.08 0 .15-.02.23-.03V19H5z"
+                    />
+                  </svg>
+                  <span class="side-menu__label">MARKET PLACE</span>
+                </a>
+              </li>
+
+              <!-- Start::slide__category -->
+              <li class="slide__category">
+                <span class="category-name">ORDERS</span>
+              </li>
+              <!-- End::slide__category -->
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="invoice-list.html" class="side-menu__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="side-menu__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M13 12h7v1.5h-7zm0-2.5h7V11h-7zm0 5h7V16h-7zM21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 15h-9V6h9v13z"
+                    />
+                  </svg>
+                  <span class="side-menu__label">ORDERS</span>
+                </a>
+              </li>
+
+              <!-- End::slide -->
+
+              <!-- Start::slide__category -->
+              <li class="slide__category">
+                <span class="category-name">INVOICE</span>
+              </li>
+              <!-- End::slide__category -->
+
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="create-invoice.html" class="side-menu__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="side-menu__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 14h-3v3h-2v-3H8v-2h3v-3h2v3h3v2zm-3-7V3.5L18.5 9H13z"
+                    />
+                  </svg>
+                  <span class="side-menu__label">CREATE INVOICE</span>
+                </a>
+              </li>
+
+              <!-- Start::slide__category -->
+              <li class="slide__category">
+                <span class="category-name">AFFILIATE PROGRAM</span>
+              </li>
+              <!-- End::slide__category -->
+
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="placeholders.html" class="side-menu__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="side-menu__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                    />
+                  </svg>
+                  <span class="side-menu__label">AFFILIATE PROGRAM</span>
+                </a>
+              </li>
+              <!-- End::slide -->
+
+              <!-- Start::slide__category -->
+              <li class="slide__category">
+                <span class="category-name">SETTINGS</span>
+              </li>
+              <!-- End::slide__category -->
+
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="reset-password-cover.html" class="side-menu__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="side-menu__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
+                    />
+                  </svg>
+                  <span class="side-menu__label">SETTINGS</span>
+                </a>
+              </li>
+              <!-- End::slide -->
+
+              <!-- Start::slide__category -->
+              <li class="slide__category">
+                <span class="category-name">LOG OUT</span>
+              </li>
+              <!-- End::slide__category -->
+
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="sign-in-cover.html" class="side-menu__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="side-menu__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"
+                    />
+                  </svg>
+                  <span class="side-menu__label">LOG OUT</span>
+                </a>
+              </li>
+              <!-- End::slide -->
+            </ul>
+            <div class="slide-right" id="slide-right">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#7b8191"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+                ></path>
+              </svg>
+            </div>
+          </nav>
+          <!-- End::nav -->
+        </div>
+        <!-- End::main-sidebar -->
+      </aside>
+      <!-- End Main-Sidebar-->
+
+      <!-- Start::content  -->
+      <div class="content">
+        <!-- Start::main-content -->
+
+        <div class="main-content">
+          <!-- Page Header -->
+          <div
+            class="md:flex block items-center justify-between mb-6 mt-[2rem] page-header-breadcrumb"
+          ></div>
+          <!-- Page Header Close -->
+
+       
+         
+
+
+           
+
+<div class="step-four-container" style="max-width: 900px; margin: 0 auto; padding: 24px">
+  
+  <div class="mobile-step-indicator-four">Order summary - Step 4 of 4</div>
+
+  <div style="display: flex; justify-content: center; margin-bottom: 32px">
+    <svg class="summary-illustration" width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <rect x="35" y="25" width="50" height="70" fill="#A78BFA" rx="6"/>
+      <rect x="40" y="30" width="40" height="60" fill="#C4B5FD" rx="4"/>
+      <line x1="45" y1="40" x2="75" y2="40" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round"/>
+      <line x1="45" y1="50" x2="75" y2="50" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round"/>
+      <line x1="45" y1="60" x2="65" y2="60" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="50" cy="80" r="4" fill="#6366F1"/>
+      <circle cx="60" cy="80" r="4" fill="#6366F1"/>
+      <circle cx="70" cy="80" r="4" fill="#6366F1"/>
+    </svg>
+  </div>
+
+  <div style="text-align: center; margin-bottom: 48px">
+    <h1 class="summary-title" style="font-size: 32px; font-weight: 700; color: #111827; margin: 0 0 12px 0">
+      Order summary
+    </h1>
+    <p class="summary-subtitle" style="font-size: 16px; color: #6b7280; margin: 0">
+      Double-check your details and move forward!
+    </p>
+  </div>
+
+  <div class="summary-cards-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px">
+    
+    <!-- The Company Card -->
+    <div class="summary-card">
+      <div class="summary-card-title">The company</div>
+      <div class="summary-card-content">
+        <div class="summary-item">
+          <span style="font-weight: 500">Company Name:</span>
+          <span>ibblogs LIMITED</span>
+        </div>
+        <div class="summary-item">
+          <span style="font-weight: 500">Category:</span>
+          <span class="category-badge">Retail</span>
+        </div>
+      </div>
+      <button class="edit-button" onclick="editCompany()">
+        <svg xmlns="http://www.w3.org/2000/svg" style="width: 16px; height: 16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+        </svg>
+        Edit
+      </button>
+    </div>
+
+    <!-- Owners Card -->
+    <div class="summary-card">
+      <div class="summary-card-title">Owners</div>
+      <div class="summary-card-content" style="display: flex; flex-direction: column; align-items: center">
+        <svg class="donut-chart" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="60" cy="60" r="45" fill="none" stroke="#6366f1" stroke-width="20"/>
+          <circle cx="60" cy="60" r="25" fill="white"/>
+        </svg>
+        <div class="summary-item" style="margin-bottom: 0; justify-content: center">
+          <span style="width: 12px; height: 12px; background-color: #6366f1; border-radius: 50%; flex-shrink: 0"></span>
+          <span>100% - Ibrahim HUSSAN</span>
+        </div>
+      </div>
+      <button class="edit-button" onclick="editOwners()">
+        <svg xmlns="http://www.w3.org/2000/svg" style="width: 16px; height: 16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+        </svg>
+        Edit
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Address Card (Full Width) -->
+  <div class="summary-card" style="margin-bottom: 32px">
+    <div class="summary-card-title">Address</div>
+    <div class="summary-card-content">
+      <div class="summary-item" style="margin-bottom: 0; line-height: 1.6">
+        27/zone D Apena Street, badagry, Lagos, 100001, Nigeria
+      </div>
+    </div>
+    <button class="edit-button" onclick="editAddress()">
+      <svg xmlns="http://www.w3.org/2000/svg" style="width: 16px; height: 16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+      </svg>
+      Edit
+    </button>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; flex-wrap: wrap; gap: 12px">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #6b7280">
+      <svg xmlns="http://www.w3.org/2000/svg" style="width: 18px; height: 18px; color: #10b981" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+      </svg>
+      Saved 1 minute ago
+    </div>
+    <button class="download-button" onclick="downloadSummary()" style="display: flex; align-items: center; gap: 8px; padding: 10px 20px; background-color: white; color: #6b7280; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" style="width: 18px; height: 18px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+      </svg>
+      Download Summary
+    </button>
+  </div>
+
+  <div class="button-group-four" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid #e5e7eb; padding-top: 24px">
+    <button type="button" onclick="goBackToAddress()" style="padding: 12px 32px; background-color: white; color: #6b7280; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer">
+      Back
+    </button>
+    <button type="button" id="confirmButton" onclick="saveAndConfirm()" style="padding: 12px 32px; background-color: #6366f1; color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 8px">
+      <svg xmlns="http://www.w3.org/2000/svg" style="width: 16px; height: 16px" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+      </svg>
+      Save & Confirm
+    </button>
+  </div>
+
+</div>
+
+
+
+
+
+
+          
+        </div>
+      </div>
+      <!-- End::content  -->
+
+      <!-- Footer opened -->
+
+      <footer
+        class="footer mt-auto xl:ps-[15rem] font-normal font-inter bg-white leading-normal !text-[0.875rem] shadow-[0_0_0.4rem_rgba(0,0,0,0.1)] dark:bg-bodybg py-4 text-center"
+      >
+        <div class="container">
+          <span class="text-gray dark:text-defaulttextcolor/50">
+            Copyright © <span id="year"></span>
+            <a
+              href="javascript:void(0);"
+              class="text-defaulttextcolor font-semibold dark:text-defaulttextcolor"
+              >FormationsHQ</a
+            >. Designed with
+            <span class="bi bi-heart-fill text-danger"></span> by
+            <a href="https://zentedge.com.ng/" target="_blank">
+              <span class="font-semibold text-primary underline"
+                >Zentedge Solutions</span
+              >
+            </a>
+            All rights reserved
+          </span>
+        </div>
+      </footer>
+      <!-- End Footer -->
+
+      <!--    -->
+    </div>
+
+    <!-- Scripts-->
+
+    <!-- Back To Top -->
+    <div class="scrollToTop">
+      <span class="arrow"><i class="ri-arrow-up-s-fill text-xl"></i></span>
+    </div>
+
+    <div id="responsive-overlay"></div>
+
+    <!-- popperjs -->
+    <script src="../assets/libs/%40popperjs/core/umd/popper.min.js"></script>
+
+    <!-- Color Picker JS -->
+    <script src="../assets/libs/%40simonwep/pickr/pickr.es5.min.js"></script>
+
+    <!-- Switch JS -->
+    <script src="../assets/js/switch.js"></script>
+
+    <!-- Simplebar JS -->
+    <script src="../assets/libs/simplebar/simplebar.min.js"></script>
+
+    <!-- Preline JS -->
+    <script src="../assets/libs/preline/preline.js"></script>
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- JSVector Maps JS -->
+    <script src="../assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+
+    <!-- JSVector Maps MapsJS -->
+    <script src="../assets/libs/jsvectormap/maps/world-merc.js"></script>
+    <script src="../assets/js/us-merc-en.js"></script>
+
+    <!-- CRM-Dashboard -->
+    <script src="../assets/js/crmdashboard.js"></script>
+
+    <!-- Sticky JS -->
+    <script src="../assets/js/sticky.js"></script>
+
+    <!-- Defaultmenu JS -->
+    <script src="../assets/js/defaultmenu.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom.js"></script>
+
+    <!-- Custom-Switcher JS -->
+    <script src="../assets/js/custom-switcher.js"></script>
+
+    
+<script>
+  function editCompany() {
+    alert('Going back to Step 1: The company');
+  }
+
+  function editOwners() {
+    alert('Going back to Step 2: Owners');
+  }
+
+  function editAddress() {
+    alert('Going back to Step 3: Address');
+  }
+
+  function downloadSummary() {
+    alert('Downloading summary...');
+    console.log('Summary downloaded');
+  }
+
+  function goBackToAddress() {
+    alert('Going back to Step 3: Address');
+  }
+
+  function saveAndConfirm() {
+    const summaryData = {
+      company: {
+        name: 'ibblogs LIMITED',
+        category: 'Retail'
+      },
+      owners: [
+        {
+          name: 'Ibrahim HUSSAN',
+          percentage: 100
+        }
+      ],
+      address: '27/zone D Apena Street, badagry, Lagos, 100001, Nigeria'
+    };
+    
+    console.log('Order confirmed:', summaryData);
+    alert('Order confirmed! Your business setup is complete.');
+  }
+</script>
+
+  </body>
+</html>
+
