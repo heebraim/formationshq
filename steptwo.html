@@ -57,57 +57,72 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <style>
-    @media (max-width: 768px) {
-      .stepper-sidebar {
-        display: none !important;
-      }
-      .form-grid {
-        grid-template-columns: 1fr !important;
-      }
-      .categories-wrapper {
-        padding: 0 !important;
-      }
-      .arrow-btn {
-        display: none !important;
-      }
-      #categoriesContainer {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        overflow-x: visible !important;
-      }
-      .category-card {
-        min-width: auto !important;
-      }
-      .mobile-step-indicator {
-        display: block !important;
-      }
-      .main-content {
-        padding: 16px !important;
-      }
-      .header-section {
-        margin-bottom: 24px !important;
-      }
-      .building-svg {
-        width: 80px !important;
-        height: 80px !important;
-      }
-      .main-title {
-        font-size: 24px !important;
-      }
-      .subtitle {
-        font-size: 14px !important;
-      }
+    <style>
+  @media (max-width: 768px) {
+    .step-two-container {
+      padding: 16px !important;
     }
+    .owners-form-grid {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+    .owner-card {
+      padding: 20px !important;
+    }
+    .mobile-step-indicator-two {
+      display: block !important;
+    }
+    .owners-illustration {
+      width: 80px !important;
+      height: 80px !important;
+    }
+    .owners-title {
+      font-size: 24px !important;
+    }
+    .owners-subtitle {
+      font-size: 14px !important;
+    }
+    .button-group {
+      flex-direction: column !important;
+      gap: 12px !important;
+    }
+    .button-group button {
+      width: 100% !important;
+    }
+  }
+  
+  .mobile-step-indicator-two {
+    display: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111827;
+    margin-bottom: 24px;
+  }
 
-    .mobile-step-indicator {
-      display: none;
-      font-size: 14px;
-      font-weight: 500;
-      color: #111827;
-      margin-bottom: 24px;
-    }
-  </style>
+  .owner-card {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .percentage-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .percentage-suffix {
+    position: absolute;
+    right: 16px;
+    color: #6b7280;
+    font-size: 14px;
+    pointer-events: none;
+  }
+</style>
+
   <body class="">
     <!-- Switcher -->
 
@@ -1372,6 +1387,76 @@
           ></div>
           <!-- Page Header Close -->
 
+       
+
+<div class="step-two-container" style="max-width: 900px; margin: 0 auto; padding: 24px">
+  
+  <div class="">Owners - Step 2 of 4</div>
+
+  <div style="display: flex; justify-content: center; margin-bottom: 32px">
+    <svg class="owners-illustration" width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <rect x="30" y="45" width="60" height="50" fill="#E0E7FF" rx="3"/>
+      <path d="M30 45 L60 25 L90 45" fill="#C7D2FE"/>
+      <rect x="35" y="50" width="50" height="3" fill="#818CF8"/>
+      <circle cx="45" cy="70" r="8" fill="#6366F1"/>
+      <path d="M45 78 Q45 85 38 88 L52 88 Q45 85 45 78" fill="#6366F1"/>
+      <circle cx="60" cy="70" r="8" fill="#6366F1"/>
+      <path d="M60 78 Q60 85 53 88 L67 88 Q60 85 60 78" fill="#6366F1"/>
+      <circle cx="75" cy="70" r="8" fill="#6366F1"/>
+      <path d="M75 78 Q75 85 68 88 L82 88 Q75 85 75 78" fill="#6366F1"/>
+      <circle cx="60" cy="30" r="6" fill="#FCD34D"/>
+    </svg>
+  </div>
+
+  <div style="text-align: center; margin-bottom: 48px">
+    <h1 class="owners-title" style="font-size: 32px; font-weight: 700; color: #111827; margin: 0 0 12px 0">
+      Owners of ibblogs
+    </h1>
+    <p class="owners-subtitle" style="font-size: 16px; color: #6b7280; margin: 0">
+      Please provide the names of all company owners along with their respective ownership percentages.
+    </p>
+  </div>
+
+  <form id="ownersForm">
+    <div id="ownersContainer">
+      
+    </div>
+
+    <button type="button" id="addOwnerBtn" onclick="addOwner()" style="display: flex; align-items: center; gap: 8px; padding: 10px 20px; background-color: transparent; color: #6366f1; border: none; font-size: 14px; font-weight: 500; cursor: pointer; margin-bottom: 32px">
+      <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+      </svg>
+      Add another owner
+    </button>
+
+    <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin-bottom: 32px">
+      <p style="font-size: 14px; color: #6b7280; margin: 0; display: flex; align-items: center; gap: 8px">
+        By clicking Next, you confirm that NONE of the company owners is a Politically Exposed Person (PEP).
+        <svg xmlns="http://www.w3.org/2000/svg" style="width: 16px; height: 16px; color: #9ca3af; flex-shrink: 0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </p>
+    </div>
+
+    <div class="button-group" style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
+      <button type="button" onclick="goBack()" style="padding: 12px 32px; background-color: white; color: #6b7280; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer">
+        Back
+      </button>
+      <button type="button" id="nextButton" disabled style="padding: 12px 32px; background-color: #d1d5db; color: #9ca3af; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: not-allowed; display: flex; align-items: center; gap: 8px">
+        Next
+        <svg xmlns="http://www.w3.org/2000/svg" style="width: 16px; height: 16px" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>
+  </form>
+
+   
+
+</div>
+
+
+
           
         </div>
       </div>
@@ -1454,82 +1539,155 @@
     <!-- Custom-Switcher JS -->
     <script src="../assets/js/custom-switcher.js"></script>
 
-    <script>
-      let selectedCategory = null;
-      let currentPage = 0;
-      const cardsPerPage = 4;
-      const totalCards = 16;
-      const totalPages = Math.ceil(totalCards / cardsPerPage);
+   <script>
+  let ownerCount = 0;
 
-      function selectCategory(element, categoryName) {
-        const allCards = document.querySelectorAll(".category-card");
-        allCards.forEach((card) => {
-          card.style.borderColor = "#e5e7eb";
-          card.style.backgroundColor = "white";
+  function createOwnerCard(index) {
+    const isFirst = index === 0;
+    const card = document.createElement('div');
+    card.className = 'owner-card';
+    card.id = `owner-${index}`;
+    card.innerHTML = `
+      <div class="owners-form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 20px">
+        <div>
+          <label style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 8px">
+            Full Name <span style="color: #ef4444">*</span>
+          </label>
+          <input 
+            type="text" 
+            id="ownerName-${index}"
+            placeholder="Enter full name" 
+            style="width: 100%; padding: 12px 16px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; color: #111827; outline: none; box-sizing: border-box"
+            oninput="validateForm()"
+          />
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 8px">
+            Ownership percentage <span style="color: #ef4444">*</span>
+          </label>
+          <div class="percentage-input-wrapper">
+            <input 
+              type="number" 
+              id="ownerPercentage-${index}"
+              value="${isFirst ? '100' : '0'}"
+              min="0"
+              max="100"
+              style="width: 100%; padding: 12px 16px; padding-right: 40px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; color: #111827; outline: none; box-sizing: border-box"
+              oninput="validateForm()"
+            />
+            <span class="percentage-suffix">%</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px">
+        <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #374151; cursor: pointer">
+          <input 
+            type="checkbox" 
+            id="ownerIsCompany-${index}"
+            style="width: 16px; height: 16px; cursor: pointer"
+          />
+          This owner is a company
+        </label>
+
+        ${!isFirst ? `
+          <button 
+            type="button" 
+            onclick="removeOwner(${index})"
+            style="display: flex; align-items: center; gap: 6px; padding: 6px 12px; background-color: transparent; color: #ef4444; border: none; font-size: 14px; font-weight: 500; cursor: pointer"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" style="width: 16px; height: 16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
+            Delete this owner
+          </button>
+        ` : ''}
+      </div>
+    `;
+    return card;
+  }
+
+  function addOwner() {
+    ownerCount++;
+    const container = document.getElementById('ownersContainer');
+    const card = createOwnerCard(ownerCount);
+    container.appendChild(card);
+    validateForm();
+  }
+
+  function removeOwner(index) {
+    const card = document.getElementById(`owner-${index}`);
+    if (card) {
+      card.remove();
+      validateForm();
+    }
+  }
+
+  function validateForm() {
+    const container = document.getElementById('ownersContainer');
+    const ownerCards = container.querySelectorAll('.owner-card');
+    const nextButton = document.getElementById('nextButton');
+    
+    let allValid = true;
+    let totalPercentage = 0;
+
+    ownerCards.forEach((card) => {
+      const nameInput = card.querySelector('input[type="text"]');
+      const percentageInput = card.querySelector('input[type="number"]');
+      
+      if (!nameInput.value.trim() || !percentageInput.value) {
+        allValid = false;
+      }
+      
+      totalPercentage += parseFloat(percentageInput.value) || 0;
+    });
+
+    if (totalPercentage !== 100) {
+      allValid = false;
+    }
+
+    if (allValid && ownerCards.length > 0) {
+      nextButton.disabled = false;
+      nextButton.style.backgroundColor = '#6366f1';
+      nextButton.style.color = 'white';
+      nextButton.style.cursor = 'pointer';
+    } else {
+      nextButton.disabled = true;
+      nextButton.style.backgroundColor = '#d1d5db';
+      nextButton.style.color = '#9ca3af';
+      nextButton.style.cursor = 'not-allowed';
+    }
+  }
+
+  function goBack() {
+    alert('Going back to Step 1: The company');
+  }
+
+  document.getElementById('nextButton').addEventListener('click', function() {
+    if (!this.disabled) {
+      const owners = [];
+      const container = document.getElementById('ownersContainer');
+      const ownerCards = container.querySelectorAll('.owner-card');
+      
+      ownerCards.forEach((card, index) => {
+        const name = card.querySelector('input[type="text"]').value;
+        const percentage = card.querySelector('input[type="number"]').value;
+        const isCompany = card.querySelector('input[type="checkbox"]').checked;
+        
+        owners.push({
+          name,
+          percentage,
+          isCompany
         });
+      });
+      
+      console.log('Owners data:', owners);
+      alert('Moving to Step 3: Address');
+    }
+  });
 
-        element.style.borderColor = "#6366f1";
-        element.style.backgroundColor = "#eef2ff";
-
-        selectedCategory = categoryName;
-        validateForm();
-      }
-
-      function scrollCategories(direction) {
-        const container = document.getElementById("categoriesContainer");
-        const cardWidth = 156;
-
-        if (direction === "next") {
-          currentPage = Math.min(currentPage + 1, totalPages - 1);
-        } else {
-          currentPage = Math.max(currentPage - 1, 0);
-        }
-
-        container.scrollLeft = currentPage * cardWidth * cardsPerPage;
-        updatePaginationDots();
-      }
-
-      function updatePaginationDots() {
-        const dots = document.querySelectorAll(".dot");
-        dots.forEach((dot, index) => {
-          if (index === currentPage) {
-            dot.style.backgroundColor = "#6366f1";
-          } else {
-            dot.style.backgroundColor = "#d1d5db";
-          }
-        });
-      }
-
-      function validateForm() {
-        const companyName = document.getElementById("companyName").value.trim();
-        const businessType = document.getElementById("businessType").value;
-        const nextButton = document.getElementById("nextButton");
-
-        if (companyName && businessType && selectedCategory) {
-          nextButton.disabled = false;
-          nextButton.style.backgroundColor = "#6366f1";
-          nextButton.style.color = "white";
-          nextButton.style.cursor = "pointer";
-        } else {
-          nextButton.disabled = true;
-          nextButton.style.backgroundColor = "#d1d5db";
-          nextButton.style.color = "#9ca3af";
-          nextButton.style.cursor = "not-allowed";
-        }
-      }
-
-      document
-        .getElementById("nextButton")
-        .addEventListener("click", function () {
-          if (!this.disabled) {
-            console.log("Form submitted:", {
-              companyName: document.getElementById("companyName").value,
-              businessType: document.getElementById("businessType").value,
-              category: selectedCategory,
-            });
-            alert("Moving to Step 2: State");
-          }
-        });
-    </script>
+  addOwner();
+</script>
   </body>
 </html>
