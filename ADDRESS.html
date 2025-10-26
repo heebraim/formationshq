@@ -2,9 +2,7 @@
 <html lang="en" dir="ltr" data-nav-layout="vertical" class="light" data-header-styles="light" data-menu-styles="light">
 
 
-<!-- Mirrored from php.spruko.com/tailwind/valex/valex/pages/cards.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Oct 2025 10:22:46 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
 
@@ -1543,66 +1541,483 @@
 
 
                 <!-- Start::row-1 -->
-                 <!-- Start::row-1 -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-  <div class="box bg-white shadow-md rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-    <div class="box-header p-4 border-b">
-      <h4 class="box-title font-bold text-lg">ITIN</h4>
+                <style>
+  @media (max-width: 768px) {
+    .poa-page-wrapper {
+      flex-direction: column !important;
+      gap: 16px !important;
+    }
+    .poa-modal-content {
+      max-width: 100% !important;
+      border-radius: 12px !important;
+    }
+    .summary-section-poa {
+      max-width: 100% !important;
+      position: static !important;
+    }
+    .poa-title {
+      font-size: 20px !important;
+    }
+    .poa-description-text {
+      font-size: 13px !important;
+      line-height: 1.5 !important;
+    }
+  }
+
+  .poa-page-wrapper {
+    display: flex;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  .poa-modal-content {
+    background-color: white;
+    border-radius: 12px;
+    flex: 1;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .poa-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    background-color: white;
+  }
+
+  .poa-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+  }
+
+  .close-button-poa {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .close-button-poa:hover {
+    color: #111827;
+  }
+
+  .poa-modal-body {
+    padding: 24px;
+  }
+
+  .poa-section {
+    margin-bottom: 24px;
+  }
+
+  .poa-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    user-select: none;
+  }
+
+  .poa-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+
+  .poa-toggle-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    transition: transform 0.2s;
+  }
+
+  .poa-toggle-icon.open {
+    transform: rotate(180deg);
+  }
+
+  .poa-section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0;
+  }
+
+  .poa-section-content.open {
+    max-height: 1500px;
+    transition: max-height 0.3s ease-in;
+  }
+
+  .poa-description-text {
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.6;
+    margin: 16px 0 0 0;
+  }
+
+  .poa-description-text p {
+    margin: 0 0 12px 0;
+  }
+
+  .poa-description-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .poa-highlight {
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .poa-requirements-list {
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.6;
+    margin: 16px 0 0 0;
+  }
+
+  .poa-requirements-list ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .poa-requirements-list li {
+    margin-bottom: 12px;
+  }
+
+  .poa-requirements-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .summary-section-poa {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    position: sticky;
+    top: 24px;
+    height: fit-content;
+    width: 320px;
+  }
+
+  .summary-title-poa {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 24px 0;
+  }
+
+  .summary-item-poa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  .summary-label-poa {
+    color: #6b7280;
+  }
+
+  .summary-value-poa {
+    color: #111827;
+    font-weight: 500;
+  }
+
+  .total-due-poa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .total-amount-poa {
+    color: #6366f1;
+    font-size: 20px;
+  }
+
+  .promo-input-group-poa {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .promo-input-poa {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #111827;
+    outline: none;
+  }
+
+  .promo-input-poa::placeholder {
+    color: #9ca3af;
+  }
+
+  .apply-button-poa {
+    padding: 10px 20px;
+    background-color: white;
+    color: #6b7280;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .checkout-button-poa {
+    width: 100%;
+    padding: 14px 24px;
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .checkout-button-poa:hover {
+    background-color: #4f46e5;
+  }
+
+  .payment-methods-poa {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .payment-icon-poa {
+    width: 40px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+  }
+
+  .refund-guarantee-poa {
+    background-color: #faf5ff;
+    border: 1px solid #e9d5ff;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+  }
+
+  .guarantee-icon-poa {
+    width: 40px;
+    height: 40px;
+    background-color: #f3e8ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .guarantee-text-poa {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+  }
+
+  .guarantee-title-poa {
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 4px;
+  }
+</style>
+
+<div class="poa-page-wrapper">
+  
+  <!-- UK Proof of Address Modal Section -->
+  <div class="poa-modal-content">
+    
+    <!-- Modal Header -->
+    <div class="poa-modal-header">
+      <h2 class="poa-title">UK Proof of Address</h2>
+      <button class="close-button-poa" onclick="closePOAModal()">×</button>
     </div>
-    <div class="box-body flex-1 p-4">
-      <h6 class="font-semibold mb-3">Individual Taxpayer Identification Number</h6>
-      <p class="text-sm text-gray-600 mb-6">ITIN allows access to more US banks, build credit history, and support your U.S. VISA.</p>
-      <a href="javascript:void(0);" class="ti-btn ti-btn-primary-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">ORDER</a>
+
+    <!-- Modal Body -->
+    <div class="poa-modal-body">
+      
+      <!-- Description Section -->
+      <div class="poa-section">
+        <div class="poa-section-header" onclick="togglePOASection(this)">
+          <h3 class="poa-section-title">Description</h3>
+          <div class="poa-toggle-icon open">
+            <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+        <div class="poa-section-content open">
+          <div class="poa-description-text">
+            <p>
+              Need official proof of a UK business address for Stripe, banking, or verifications? Our <span class="poa-highlight">UK Commercial Lease Agreement</span> provides a legally signed lease between your company and a UK business center in Manchester — <span class="poa-highlight">valid for 1 full year</span>.
+            </p>
+            <p>
+              This is offered as a <span class="poa-highlight">yearly subscription</span>, and you're free to <span class="poa-highlight">cancel anytime</span> to avoid renewal. However, the <span class="poa-highlight">initial payment is non-refundable once the signed lease is delivered</span>, as it includes preparation and confirmation from the landlord.
+            </p>
+            <p>
+              The lease is:
+            </p>
+            <ul style="margin: 12px 0 12px 20px; padding: 0">
+              <li style="margin-bottom: 8px">Accepted by <span class="poa-highlight">UK banks, Stripe,</span> and payment processors</li>
+              <li style="margin-bottom: 8px">Useful for <span class="poa-highlight">HMRC or other regulatory verifications</span></li>
+              <li style="margin-bottom: 0">Ideal for showing a professional business presence without needing a physical office</li>
+            </ul>
+            <p>
+              The agreement includes your company's name, the landlord's signature, and the official business center address — <span class="poa-highlight">delivered within 2–3 business days</span> of receiving your details.
+            </p>
+            <p>
+              No hidden fees, no renewals unless you choose to continue. Simple and professional.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Requirements Section -->
+      <div class="poa-section">
+        <div class="poa-section-header" onclick="togglePOASection(this)">
+          <h3 class="poa-section-title">Requirements</h3>
+          <div class="poa-toggle-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+        <div class="poa-section-content">
+          <div class="poa-requirements-list">
+            <ul>
+              <li>UK Company Name</li>
+              <li>Company Number</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="box-footer p-4 border-t">
-      <span class="font-medium text-gray-800">$297 Total amount</span>
-    </div>
+
   </div>
 
-  <div class="box bg-white shadow-md rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-    <div class="box-header p-4 border-b">
-      <h4 class="box-title font-bold text-lg">Logo Design</h4>
+  <!-- Summary Section -->
+  <div class="summary-section-poa">
+    <h3 class="summary-title-poa">Summary</h3>
+    
+    <div class="summary-item-poa">
+      <span class="summary-label-poa">Price</span>
+      <span class="summary-value-poa">$129 per year</span>
     </div>
-    <div class="box-body flex-1 p-4">
-      <h6 class="font-semibold mb-3">3 completely original logo designs</h6>
-      <p class="text-sm text-gray-600 mb-6">Get 3 original, custom-made logos tailored to your business style and preferences — 100% unique.</p>
-      <a href="javascript:void(0);" class="ti-btn ti-btn-primary-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">ORDER</a>
-    </div>
-    <div class="box-footer p-4 border-t">
-      <span class="font-medium text-gray-800">$50 Total amount</span>
-    </div>
-  </div>
 
-  <div class="box bg-white shadow-md rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-    <div class="box-header p-4 border-b">
-      <h4 class="box-title font-bold text-lg">EIN</h4>
+    <div class="promo-input-group-poa">
+      <input type="text" class="promo-input-poa" placeholder="Promo code" />
+      <button class="apply-button-poa">Apply</button>
     </div>
-    <div class="box-body flex-1 p-4">
-      <h6 class="font-semibold mb-3">Employer Identification Number</h6>
-      <p class="text-sm text-gray-600 mb-6">Get your EIN in just 2–5 business days as a non-US resident. We’ve optimized the process for speed and accuracy.</p>
-      <a href="javascript:void(0);" class="ti-btn ti-btn-primary-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">ORDER</a>
-    </div>
-    <div class="box-footer p-4 border-t">
-      <span class="font-medium text-gray-800">$60 Total amount</span>
-    </div>
-  </div>
 
-  <div class="box bg-white shadow-md rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-    <div class="box-header p-4 border-b">
-      <h4 class="box-title font-bold text-lg">UK Proof Of Address</h4>
+    <div class="total-due-poa">
+      <span>Total due today</span>
+      <span class="total-amount-poa">$129</span>
     </div>
-    <div class="box-body flex-1 p-4">
-      <h6 class="font-semibold mb-3">Obtain a UK proof of address accepted by Stripe and banks</h6>
-      <p class="text-sm text-gray-600 mb-6">Our UK Commercial Lease Agreement provides a legally signed lease — valid for 1 full year.</p>
-      <a href="javascript:void(0);" class="ti-btn ti-btn-primary-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">ORDER</a>
+
+    <button class="checkout-button-poa" onclick="proceedToCheckoutPOA()">
+      Checkout
+      <svg xmlns="http://www.w3.org/2000/svg" style="width: 18px; height: 18px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+
+    <div class="payment-methods-poa">
+      <div class="payment-icon-poa" style="background-color: #1434CB; color: white; font-weight: bold">VISA</div>
+      <div class="payment-icon-poa" style="background-color: #EB001B; color: white; font-weight: bold">MC</div>
     </div>
-    <div class="box-footer p-4 border-t">
-      <span class="font-medium text-gray-800">$129/y</span>
+
+    <div class="refund-guarantee-poa">
+      <div class="guarantee-icon-poa">
+        <svg xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px; color: #a855f7" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 1C6.48 1 2 5.48 2 11s4.48 10 10 10 10-4.48 10-10S17.52 1 12 1zm-2 15l-5-5 1.41-1.41L10 13.17l7.59-7.59L19 7l-9 9z" />
+        </svg>
+      </div>
+      <div>
+        <div class="guarantee-title-poa">100% Refund Guarantee</div>
+        <div class="guarantee-text-poa">
+          We offer a hassle-free refund with no questions asked if we're unable to fulfill your order.
+        </div>
+      </div>
     </div>
   </div>
 
 </div>
+
+<script>
+  function togglePOASection(headerElement) {
+    const content = headerElement.nextElementSibling;
+    const icon = headerElement.querySelector('.poa-toggle-icon');
+    
+    content.classList.toggle('open');
+    icon.classList.toggle('open');
+  }
+
+  function closePOAModal() {
+    const wrapper = document.querySelector('.poa-page-wrapper');
+    if (wrapper) {
+      wrapper.style.display = 'none';
+    }
+  }
+
+  function proceedToCheckoutPOA() {
+    const promoCode = document.querySelector('.promo-input-poa').value;
+    const checkoutData = {
+      service: 'UK Proof of Address',
+      price: 129,
+      validity: '1 full year',
+      promoCode: promoCode || 'none',
+      timestamp: new Date().toISOString()
+    };
+    
+    console.log('Proceeding to checkout:', checkoutData);
+    alert('Redirecting to payment gateway...');
+  }
+</script>
+
 <!-- End::row-1 -->
 
                 <!-- <div class="grid grid-cols-12 md:gap-x-6">
@@ -1762,7 +2177,4 @@
 </body>
 
 
-<!-- Mirrored from php.spruko.com/tailwind/valex/valex/pages/cards.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Oct 2025 10:22:55 GMT -->
-
 </html>
-<!-- This code use for render base file -->

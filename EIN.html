@@ -2,9 +2,7 @@
 <html lang="en" dir="ltr" data-nav-layout="vertical" class="light" data-header-styles="light" data-menu-styles="light">
 
 
-<!-- Mirrored from php.spruko.com/tailwind/valex/valex/pages/cards.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Oct 2025 10:22:46 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
 
@@ -1543,66 +1541,475 @@
 
 
                 <!-- Start::row-1 -->
-                 <!-- Start::row-1 -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-  <div class="box bg-white shadow-md rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-    <div class="box-header p-4 border-b">
-      <h4 class="box-title font-bold text-lg">ITIN</h4>
+                <style>
+  @media (max-width: 768px) {
+    .ein-page-wrapper {
+      flex-direction: column !important;
+      gap: 16px !important;
+    }
+    .ein-modal-content {
+      max-width: 100% !important;
+      border-radius: 12px !important;
+    }
+    .summary-section-ein {
+      max-width: 100% !important;
+      position: static !important;
+    }
+    .ein-title {
+      font-size: 20px !important;
+    }
+    .ein-description-text {
+      font-size: 13px !important;
+      line-height: 1.5 !important;
+    }
+  }
+
+  .ein-page-wrapper {
+    display: flex;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  .ein-modal-content {
+    background-color: white;
+    border-radius: 12px;
+    flex: 1;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .ein-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    background-color: white;
+  }
+
+  .ein-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+  }
+
+  .close-button-ein {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .close-button-ein:hover {
+    color: #111827;
+  }
+
+  .ein-modal-body {
+    padding: 24px;
+  }
+
+  .ein-section {
+    margin-bottom: 24px;
+  }
+
+  .ein-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    user-select: none;
+  }
+
+  .ein-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+
+  .ein-toggle-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    transition: transform 0.2s;
+  }
+
+  .ein-toggle-icon.open {
+    transform: rotate(180deg);
+  }
+
+  .ein-section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0;
+  }
+
+  .ein-section-content.open {
+    max-height: 1000px;
+    transition: max-height 0.3s ease-in;
+  }
+
+  .ein-description-text {
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.6;
+    margin: 16px 0 0 0;
+  }
+
+  .ein-description-text p {
+    margin: 0 0 12px 0;
+  }
+
+  .ein-description-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ein-highlight {
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .ein-requirements-list {
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.6;
+    margin: 16px 0 0 0;
+  }
+
+  .ein-requirements-list ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .ein-requirements-list li {
+    margin-bottom: 12px;
+  }
+
+  .ein-requirements-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .summary-section-ein {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    position: sticky;
+    top: 24px;
+    height: fit-content;
+    width: 320px;
+  }
+
+  .summary-title-ein {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 24px 0;
+  }
+
+  .summary-item-ein {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  .summary-label-ein {
+    color: #6b7280;
+  }
+
+  .summary-value-ein {
+    color: #111827;
+    font-weight: 500;
+  }
+
+  .total-due-ein {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .total-amount-ein {
+    color: #6366f1;
+    font-size: 20px;
+  }
+
+  .promo-input-group-ein {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .promo-input-ein {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #111827;
+    outline: none;
+  }
+
+  .promo-input-ein::placeholder {
+    color: #9ca3af;
+  }
+
+  .apply-button-ein {
+    padding: 10px 20px;
+    background-color: white;
+    color: #6b7280;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .checkout-button-ein {
+    width: 100%;
+    padding: 14px 24px;
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .checkout-button-ein:hover {
+    background-color: #4f46e5;
+  }
+
+  .payment-methods-ein {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .payment-icon-ein {
+    width: 40px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+  }
+
+  .refund-guarantee-ein {
+    background-color: #faf5ff;
+    border: 1px solid #e9d5ff;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+  }
+
+  .guarantee-icon-ein {
+    width: 40px;
+    height: 40px;
+    background-color: #f3e8ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .guarantee-text-ein {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+  }
+
+  .guarantee-title-ein {
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 4px;
+  }
+</style>
+
+<div class="ein-page-wrapper">
+  
+  <!-- EIN Modal Section -->
+  <div class="ein-modal-content">
+    
+    <!-- Modal Header -->
+    <div class="ein-modal-header">
+      <h2 class="ein-title">EIN</h2>
+      <button class="close-button-ein" onclick="closeEINModal()">×</button>
     </div>
-    <div class="box-body flex-1 p-4">
-      <h6 class="font-semibold mb-3">Individual Taxpayer Identification Number</h6>
-      <p class="text-sm text-gray-600 mb-6">ITIN allows access to more US banks, build credit history, and support your U.S. VISA.</p>
-      <a href="javascript:void(0);" class="ti-btn ti-btn-primary-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">ORDER</a>
+
+    <!-- Modal Body -->
+    <div class="ein-modal-body">
+      
+      <!-- Description Section -->
+      <div class="ein-section">
+        <div class="ein-section-header" onclick="toggleEINSection(this)">
+          <h3 class="ein-section-title">Description</h3>
+          <div class="ein-toggle-icon open">
+            <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+        <div class="ein-section-content open">
+          <div class="ein-description-text">
+            <p>
+              An <span class="ein-highlight">EIN (Employer Identification Number)</span> is required for opening a US business bank account, applying for Stripe or PayPal, filing taxes, and more. If you're a non-US resident, getting your EIN can often be a slow process — <span class="ein-highlight">most providers take 10 to 30 days</span>.
+            </p>
+            <p>
+              At Privatily, we've optimized the process to deliver your EIN in just <span class="ein-highlight">2 to 5 business days</span>, making us one of the fastest options available for non-residents. No delays, no confusing forms — just fast and reliable service.
+            </p>
+            <p>
+              We handle the entire application for you and keep you updated at every step. If you formed your company through us, you probably don't need to buy this since all our US packages already comes with EIN included for free.
+            </p>
+            <p>
+              Save time, avoid frustration, and get your EIN the smart way.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Requirements Section -->
+      <div class="ein-section">
+        <div class="ein-section-header" onclick="toggleEINSection(this)">
+          <h3 class="ein-section-title">Requirements</h3>
+          <div class="ein-toggle-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+        <div class="ein-section-content">
+          <div class="ein-requirements-list">
+            <ul>
+              <li>Your US company documents.</li>
+              <li>Proof of Identity (such as an ID card or Passport)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="box-footer p-4 border-t">
-      <span class="font-medium text-gray-800">$297 Total amount</span>
-    </div>
+
   </div>
 
-  <div class="box bg-white shadow-md rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-    <div class="box-header p-4 border-b">
-      <h4 class="box-title font-bold text-lg">Logo Design</h4>
+  <!-- Summary Section -->
+  <div class="summary-section-ein">
+    <h3 class="summary-title-ein">Summary</h3>
+    
+    <div class="summary-item-ein">
+      <span class="summary-label-ein">Price</span>
+      <span class="summary-value-ein">$60</span>
     </div>
-    <div class="box-body flex-1 p-4">
-      <h6 class="font-semibold mb-3">3 completely original logo designs</h6>
-      <p class="text-sm text-gray-600 mb-6">Get 3 original, custom-made logos tailored to your business style and preferences — 100% unique.</p>
-      <a href="javascript:void(0);" class="ti-btn ti-btn-primary-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">ORDER</a>
-    </div>
-    <div class="box-footer p-4 border-t">
-      <span class="font-medium text-gray-800">$50 Total amount</span>
-    </div>
-  </div>
 
-  <div class="box bg-white shadow-md rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-    <div class="box-header p-4 border-b">
-      <h4 class="box-title font-bold text-lg">EIN</h4>
+    <div class="promo-input-group-ein">
+      <input type="text" class="promo-input-ein" placeholder="Promo code" />
+      <button class="apply-button-ein">Apply</button>
     </div>
-    <div class="box-body flex-1 p-4">
-      <h6 class="font-semibold mb-3">Employer Identification Number</h6>
-      <p class="text-sm text-gray-600 mb-6">Get your EIN in just 2–5 business days as a non-US resident. We’ve optimized the process for speed and accuracy.</p>
-      <a href="javascript:void(0);" class="ti-btn ti-btn-primary-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">ORDER</a>
-    </div>
-    <div class="box-footer p-4 border-t">
-      <span class="font-medium text-gray-800">$60 Total amount</span>
-    </div>
-  </div>
 
-  <div class="box bg-white shadow-md rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-    <div class="box-header p-4 border-b">
-      <h4 class="box-title font-bold text-lg">UK Proof Of Address</h4>
+    <div class="total-due-ein">
+      <span>Total due today</span>
+      <span class="total-amount-ein">$60</span>
     </div>
-    <div class="box-body flex-1 p-4">
-      <h6 class="font-semibold mb-3">Obtain a UK proof of address accepted by Stripe and banks</h6>
-      <p class="text-sm text-gray-600 mb-6">Our UK Commercial Lease Agreement provides a legally signed lease — valid for 1 full year.</p>
-      <a href="javascript:void(0);" class="ti-btn ti-btn-primary-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">ORDER</a>
+
+    <button class="checkout-button-ein" onclick="proceedToCheckoutEIN()">
+      Checkout
+      <svg xmlns="http://www.w3.org/2000/svg" style="width: 18px; height: 18px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+
+    <div class="payment-methods-ein">
+      <div class="payment-icon-ein" style="background-color: #1434CB; color: white; font-weight: bold">VISA</div>
+      <div class="payment-icon-ein" style="background-color: #EB001B; color: white; font-weight: bold">MC</div>
     </div>
-    <div class="box-footer p-4 border-t">
-      <span class="font-medium text-gray-800">$129/y</span>
+
+    <div class="refund-guarantee-ein">
+      <div class="guarantee-icon-ein">
+        <svg xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px; color: #a855f7" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 1C6.48 1 2 5.48 2 11s4.48 10 10 10 10-4.48 10-10S17.52 1 12 1zm-2 15l-5-5 1.41-1.41L10 13.17l7.59-7.59L19 7l-9 9z" />
+        </svg>
+      </div>
+      <div>
+        <div class="guarantee-title-ein">100% Refund Guarantee</div>
+        <div class="guarantee-text-ein">
+          We offer a satisfaction guarantee refund with no questions asked if we're unable to fulfill your order.
+        </div>
+      </div>
     </div>
   </div>
 
 </div>
+
+<script>
+  function toggleEINSection(headerElement) {
+    const content = headerElement.nextElementSibling;
+    const icon = headerElement.querySelector('.ein-toggle-icon');
+    
+    content.classList.toggle('open');
+    icon.classList.toggle('open');
+  }
+
+  function closeEINModal() {
+    const wrapper = document.querySelector('.ein-page-wrapper');
+    if (wrapper) {
+      wrapper.style.display = 'none';
+    }
+  }
+
+  function proceedToCheckoutEIN() {
+    const promoCode = document.querySelector('.promo-input-ein').value;
+    const checkoutData = {
+      service: 'EIN',
+      price: 60,
+      processingTime: '2 to 5 business days',
+      promoCode: promoCode || 'none',
+      timestamp: new Date().toISOString()
+    };
+    
+    console.log('Proceeding to checkout:', checkoutData);
+    alert('Redirecting to payment gateway...');
+  }
+</script>
+
 <!-- End::row-1 -->
 
                 <!-- <div class="grid grid-cols-12 md:gap-x-6">
@@ -1762,7 +2169,4 @@
 </body>
 
 
-<!-- Mirrored from php.spruko.com/tailwind/valex/valex/pages/cards.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Oct 2025 10:22:55 GMT -->
-
 </html>
-<!-- This code use for render base file -->
