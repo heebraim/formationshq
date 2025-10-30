@@ -58,7 +58,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
     
-     <style>
+     <!-- <style>
   @media (max-width: 768px) {
     .final-step-container {
       padding: 16px !important;
@@ -203,6 +203,301 @@
 
 
 /* new ccs end */
+
+  .summary-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 24px;
+  }
+
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  .summary-label {
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .summary-value {
+    color: #111827;
+    font-weight: 500;
+  }
+
+  .total-due {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .total-amount {
+    color: #6366f1;
+    font-size: 20px;
+  }
+
+  .promo-input-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .promo-input {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #111827;
+    outline: none;
+  }
+
+  .promo-input::placeholder {
+    color: #9ca3af;
+  }
+
+  .apply-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #6b7280;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .checkout-button {
+    width: 100%;
+    padding: 14px 24px;
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .checkout-button:hover {
+    background-color: #4f46e5;
+  }
+
+  .payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .payment-icon {
+    width: 40px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+  }
+
+  .refund-guarantee {
+    background-color: #faf5ff;
+    border: 1px solid #e9d5ff;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+  }
+
+  .guarantee-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #f3e8ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .guarantee-text {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+  }
+
+  .guarantee-title {
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 4px;
+  }
+</style> -->
+
+
+<style>
+  @media (max-width: 768px) {
+    .final-step-container {
+      padding: 16px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+    .final-step-content-grid {
+      grid-template-columns: 1fr !important;
+      gap: 24px !important;
+    }
+    .final-step-title {
+      font-size: 24px !important;
+      text-align: center !important;
+    }
+    .final-step-subtitle {
+      font-size: 14px !important;
+      text-align: center !important;
+    }
+    .package-heading {
+      font-size: 18px !important;
+    }
+    .features-list {
+      font-size: 13px !important;
+    }
+    .payment-illustration {
+      width: 90px !important;
+      height: 90px !important;
+      margin: 12px 0 0 !important;
+    }
+    .summary-section {
+      position: static !important;
+    }
+
+    /* ✅ Fix company header alignment */
+    .company-header {
+      justify-content: center !important;
+      text-align: center !important;
+      width: 100% !important;
+    }
+
+    /* ✅ Fix header title + svg shift */
+    .final-step-container div[style*="justify-content: space-between"] {
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      text-align: center !important;
+      width: 100% !important;
+    }
+  }
+
+  .final-step-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  .company-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 32px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .checkmark-badge {
+    width: 24px;
+    height: 24px;
+    background-color: #6366f1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .final-step-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .features-card {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 32px;
+    position: relative;
+  }
+
+  .package-heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 24px;
+    line-height: 1.4;
+  }
+
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .features-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 12px;
+  }
+
+  .features-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .checkmark-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #10b981;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  .summary-section {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    position: sticky;
+    top: 24px;
+    height: fit-content;
+  }
 
   .summary-title {
     font-size: 20px;
