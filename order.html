@@ -354,70 +354,171 @@
 
 
 <style>
-
+  /* --------------------------
+     MOBILE FIRST OVERRIDES
+     -------------------------- */
   @media (max-width: 768px) {
-  .main-content {
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 100% !important;
-  }
+    /* Ensure page respects viewport and no horizontal overflow */
+    html, body {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow-x: hidden !important;
+    }
 
-  /* Ensure no left offset from dashboard layout */
-  .page-header-breadcrumb {
-    display: none !important;
-  }
-}
+    /* Defensive: prevent children from escaping viewport */
+    *, *::before, *::after {
+      box-sizing: border-box !important;
+      max-width: 100% !important;
+      word-break: break-word;
+    }
 
-  @media (max-width: 768px) {
+    /* Remove dashboard padding/offset that pushes everything right */
+    .main-content {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin: 0 auto !important;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    /* Hide or neutralize the breadcrumb/header placeholder that adds spacing */
+    .page-header-breadcrumb {
+      margin: 0 !important;
+      padding: 0 !important;
+      display: block !important; /* keep layout safe; set to none if it creates space */
+      width: 100% !important;
+    }
+
+    /* Final-step container: make it fluid and centered */
     .final-step-container {
       padding: 16px !important;
       width: 100% !important;
       max-width: 100% !important;
+      margin: 0 auto !important;
       overflow-x: hidden !important;
     }
+
+    /* Stack grid to single column (you already had this) */
     .final-step-content-grid {
-      grid-template-columns: 1fr !important;
+      display: block !important;
+      grid-template-columns: none !important;
       gap: 24px !important;
+      margin: 0 auto !important;
+      width: 100% !important;
     }
+
+    /* Ensure cards do not overflow and have proper spacing */
+    .features-card,
+    .summary-section {
+      width: calc(100% - 0px) !important;
+      max-width: 100% !important;
+      margin: 0 auto 20px auto !important;
+      padding: 20px !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Make summary card flow normally (not sticky on mobile) */
+    .summary-section {
+      position: static !important;
+      top: auto !important;
+    }
+
+    /* Fix the inline header row (the one with inline style: justify-content: space-between) */
+    .final-step-container > div[style*="justify-content: space-between"] {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 12px !important;
+      margin-bottom: 16px !important;
+      width: 100% !important;
+      padding: 0 !important;
+      text-align: center !important;
+    }
+
+    /* Title and subtitle centered and sized */
     .final-step-title {
       font-size: 24px !important;
       text-align: center !important;
+      margin: 0 !important;
+      line-height: 1.2 !important;
+      word-break: break-word !important;
     }
+
     .final-step-subtitle {
       font-size: 14px !important;
       text-align: center !important;
+      margin: 0 !important;
+      color: #6b7280 !important;
     }
-    .package-heading {
-      font-size: 18px !important;
-    }
-    .features-list {
-      font-size: 13px !important;
-    }
+
+    /* Shrink and center illustration */
     .payment-illustration {
       width: 90px !important;
       height: 90px !important;
-      margin: 12px 0 0 !important;
-    }
-    .summary-section {
-      position: static !important;
+      margin: 0 auto !important;
+      display: block !important;
     }
 
-    /* ✅ Fix company header alignment */
+    /* Company header centered */
     .company-header {
-      justify-content: center !important;
-      text-align: center !important;
-      width: 100% !important;
-    }
-
-    /* ✅ Fix header title + svg shift */
-    .final-step-container div[style*="justify-content: space-between"] {
-      flex-direction: column !important;
+      display: flex !important;
       justify-content: center !important;
       align-items: center !important;
+      gap: 8px !important;
+      width: 100% !important;
       text-align: center !important;
+      margin-bottom: 16px !important;
+    }
+
+    .checkmark-badge {
+      flex-shrink: 0 !important;
+    }
+
+    /* Text sizes inside cards for better fit */
+    .package-heading {
+      font-size: 18px !important;
+      line-height: 1.3 !important;
+    }
+    .features-list { font-size: 13px !important; }
+    .features-list li { gap: 10px !important; }
+
+    /* Promo group: wrap inputs so Apply not pushed out */
+    .promo-input-group {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 8px !important;
       width: 100% !important;
     }
+    .promo-input {
+      flex: 1 1 auto !important;
+      min-width: 0 !important; /* critical so it can shrink */
+    }
+    .apply-button {
+      flex: 0 0 auto !important;
+    }
+
+    /* Buttons and totals */
+    .total-due { padding: 12px 0 !important; }
+    .total-amount { font-size: 18px !important; }
+
+    .checkout-button {
+      padding: 12px 18px !important;
+      font-size: 15px !important;
+      margin-bottom: 12px !important;
+    }
+
+    /* Small visual tweak for refund box */
+    .refund-guarantee {
+      padding: 12px !important;
+    }
   }
+
+  /* --------------------------
+     DESKTOP / DEFAULT RULES
+     (kept from your original)
+     -------------------------- */
 
   .final-step-container {
     max-width: 1200px;
@@ -660,6 +761,7 @@
     margin-bottom: 4px;
   }
 </style>
+
 
   <body class="">
     <!-- Switcher -->
