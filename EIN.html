@@ -43,6 +43,353 @@
 
 </head>
 
+
+<style>
+  @media (max-width: 768px) {
+    .ein-page-wrapper {
+      flex-direction: column !important;
+      gap: 16px !important;
+    }
+    .ein-modal-content {
+      max-width: 100% !important;
+      border-radius: 12px !important;
+    }
+    .summary-section-ein {
+      max-width: 100% !important;
+      position: static !important;
+    }
+    .ein-title {
+      font-size: 20px !important;
+    }
+    .ein-description-text {
+      font-size: 13px !important;
+      line-height: 1.5 !important;
+    }
+  }
+
+  .ein-page-wrapper {
+    display: flex;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  .ein-modal-content {
+    background-color: white;
+    border-radius: 12px;
+    flex: 1;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .ein-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    background-color: white;
+  }
+
+  .ein-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+  }
+
+  .close-button-ein {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .close-button-ein:hover {
+    color: #111827;
+  }
+
+  .ein-modal-body {
+    padding: 24px;
+  }
+
+  .ein-section {
+    margin-bottom: 24px;
+  }
+
+  .ein-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    user-select: none;
+  }
+
+  .ein-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+
+  .ein-toggle-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    transition: transform 0.2s;
+  }
+
+  .ein-toggle-icon.open {
+    transform: rotate(180deg);
+  }
+
+  .ein-section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0;
+  }
+
+  .ein-section-content.open {
+    max-height: 1000px;
+    transition: max-height 0.3s ease-in;
+  }
+
+  .ein-description-text {
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.6;
+    margin: 16px 0 0 0;
+  }
+
+  .ein-description-text p {
+    margin: 0 0 12px 0;
+  }
+
+  .ein-description-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ein-highlight {
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .ein-requirements-list {
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.6;
+    margin: 16px 0 0 0;
+  }
+
+  .ein-requirements-list ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .ein-requirements-list li {
+    margin-bottom: 12px;
+  }
+
+  .ein-requirements-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .summary-section-ein {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    position: sticky;
+    top: 24px;
+    height: fit-content;
+    width: 320px;
+  }
+
+  .summary-title-ein {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 24px 0;
+  }
+
+  .summary-item-ein {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  .summary-label-ein {
+    color: #6b7280;
+  }
+
+  .summary-value-ein {
+    color: #111827;
+    font-weight: 500;
+  }
+
+  .total-due-ein {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .total-amount-ein {
+    color: #6366f1;
+    font-size: 20px;
+  }
+
+  .promo-input-group-ein {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .promo-input-ein {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #111827;
+    outline: none;
+  }
+
+  .promo-input-ein::placeholder {
+    color: #9ca3af;
+  }
+
+  .apply-button-ein {
+    padding: 10px 20px;
+    background-color: white;
+    color: #6b7280;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .checkout-button-ein {
+    width: 100%;
+    padding: 14px 24px;
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .checkout-button-ein:hover {
+    background-color: #4f46e5;
+  }
+
+  .payment-methods-ein {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .payment-icon-ein {
+    width: 40px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+  }
+
+  .refund-guarantee-ein {
+    background-color: #faf5ff;
+    border: 1px solid #e9d5ff;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+  }
+
+  .guarantee-icon-ein {
+    width: 40px;
+    height: 40px;
+    background-color: #f3e8ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .guarantee-text-ein {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+  }
+
+  .guarantee-title-ein {
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 4px;
+  }
+
+  /* ✅ Fix shifting and overflow issues on small phones */
+@media (max-width: 480px) {
+  .summary-section-ein {
+    width: 100% !important;
+  }
+
+  .promo-input-group-ein {
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+  }
+
+  .promo-input-ein {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .apply-button-ein {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+  }
+}
+
+</style>
+
 <body class="">
 
     <!-- Switcher -->
@@ -1542,328 +1889,7 @@
 
                 <!-- Start::row-1 -->
 
-                <style>
-  @media (max-width: 768px) {
-    .ein-page-wrapper {
-      flex-direction: column !important;
-      gap: 16px !important;
-    }
-    .ein-modal-content {
-      max-width: 100% !important;
-      border-radius: 12px !important;
-    }
-    .summary-section-ein {
-      max-width: 100% !important;
-      position: static !important;
-    }
-    .ein-title {
-      font-size: 20px !important;
-    }
-    .ein-description-text {
-      font-size: 13px !important;
-      line-height: 1.5 !important;
-    }
-  }
-
-  .ein-page-wrapper {
-    display: flex;
-    gap: 32px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 24px;
-  }
-
-  .ein-modal-content {
-    background-color: white;
-    border-radius: 12px;
-    flex: 1;
-    max-height: 85vh;
-    overflow-y: auto;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
-  .ein-modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px;
-    border-bottom: 1px solid #e5e7eb;
-    position: sticky;
-    top: 0;
-    background-color: white;
-  }
-
-  .ein-title {
-    font-size: 24px;
-    font-weight: 700;
-    color: #111827;
-    margin: 0;
-  }
-
-  .close-button-ein {
-    width: 32px;
-    height: 32px;
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    color: #6b7280;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-  }
-
-  .close-button-ein:hover {
-    color: #111827;
-  }
-
-  .ein-modal-body {
-    padding: 24px;
-  }
-
-  .ein-section {
-    margin-bottom: 24px;
-  }
-
-  .ein-section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    padding: 12px 0;
-    border-bottom: 1px solid #e5e7eb;
-    user-select: none;
-  }
-
-  .ein-section-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #111827;
-    margin: 0;
-  }
-
-  .ein-toggle-icon {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #6b7280;
-    transition: transform 0.2s;
-  }
-
-  .ein-toggle-icon.open {
-    transform: rotate(180deg);
-  }
-
-  .ein-section-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    padding: 0;
-  }
-
-  .ein-section-content.open {
-    max-height: 1000px;
-    transition: max-height 0.3s ease-in;
-  }
-
-  .ein-description-text {
-    font-size: 14px;
-    color: #374151;
-    line-height: 1.6;
-    margin: 16px 0 0 0;
-  }
-
-  .ein-description-text p {
-    margin: 0 0 12px 0;
-  }
-
-  .ein-description-text p:last-child {
-    margin-bottom: 0;
-  }
-
-  .ein-highlight {
-    font-weight: 600;
-    color: #111827;
-  }
-
-  .ein-requirements-list {
-    font-size: 14px;
-    color: #374151;
-    line-height: 1.6;
-    margin: 16px 0 0 0;
-  }
-
-  .ein-requirements-list ul {
-    margin: 0;
-    padding-left: 20px;
-  }
-
-  .ein-requirements-list li {
-    margin-bottom: 12px;
-  }
-
-  .ein-requirements-list li:last-child {
-    margin-bottom: 0;
-  }
-
-  .summary-section-ein {
-    background-color: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 24px;
-    position: sticky;
-    top: 24px;
-    height: fit-content;
-    width: 320px;
-  }
-
-  .summary-title-ein {
-    font-size: 20px;
-    font-weight: 700;
-    color: #111827;
-    margin: 0 0 24px 0;
-  }
-
-  .summary-item-ein {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-    font-size: 14px;
-  }
-
-  .summary-label-ein {
-    color: #6b7280;
-  }
-
-  .summary-value-ein {
-    color: #111827;
-    font-weight: 500;
-  }
-
-  .total-due-ein {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 0;
-    border-top: 1px solid #e5e7eb;
-    border-bottom: 1px solid #e5e7eb;
-    margin-bottom: 24px;
-    font-size: 16px;
-    font-weight: 600;
-  }
-
-  .total-amount-ein {
-    color: #6366f1;
-    font-size: 20px;
-  }
-
-  .promo-input-group-ein {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 24px;
-  }
-
-  .promo-input-ein {
-    flex: 1;
-    padding: 10px 16px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font-size: 14px;
-    color: #111827;
-    outline: none;
-  }
-
-  .promo-input-ein::placeholder {
-    color: #9ca3af;
-  }
-
-  .apply-button-ein {
-    padding: 10px 20px;
-    background-color: white;
-    color: #6b7280;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-  }
-
-  .checkout-button-ein {
-    width: 100%;
-    padding: 14px 24px;
-    background-color: #6366f1;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 16px;
-  }
-
-  .checkout-button-ein:hover {
-    background-color: #4f46e5;
-  }
-
-  .payment-methods-ein {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-
-  .payment-icon-ein {
-    width: 40px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 600;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
-  }
-
-  .refund-guarantee-ein {
-    background-color: #faf5ff;
-    border: 1px solid #e9d5ff;
-    border-radius: 8px;
-    padding: 16px;
-    display: flex;
-    gap: 12px;
-  }
-
-  .guarantee-icon-ein {
-    width: 40px;
-    height: 40px;
-    background-color: #f3e8ff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .guarantee-text-ein {
-    font-size: 13px;
-    color: #6b7280;
-    line-height: 1.5;
-  }
-
-  .guarantee-title-ein {
-    font-weight: 600;
-    color: #111827;
-    margin-bottom: 4px;
-  }
-</style>
+                
 
 <div class="ein-page-wrapper">
   
