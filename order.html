@@ -183,6 +183,27 @@
     height: fit-content;
   }
 
+/* new ccs start */
+
+@media (max-width: 768px) {
+  /* ✅ Fix header shift issue */
+  .final-step-container > div:first-of-type {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+
+  .payment-illustration {
+    width: 90px !important;
+    height: 90px !important;
+    margin-top: 12px !important;
+  }
+}
+
+
+/* new ccs end */
+
   .summary-title {
     font-size: 20px;
     font-weight: 700;
